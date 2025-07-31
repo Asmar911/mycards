@@ -93,7 +93,7 @@ button.save-btn:hover {
 /* Settings panel */
 #settings-panel {
   display: none;
-  background: #2d2d30;
+/*   background: #2d2d30; */
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
