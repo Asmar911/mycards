@@ -26,12 +26,12 @@ body {
 
 .sort {
   position: fixed;
-  bottom: calc(6rem + 1rem); /* Height of bottom bar + some space */
+  bottom: 65px; /*calc(6rem + 1rem);  Height of bottom bar + some space */
   right: 1rem;
   background: #252526;
   padding: 0.8rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
   gap: 0.5rem;
