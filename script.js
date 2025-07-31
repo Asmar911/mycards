@@ -14,13 +14,17 @@ let discountByType = {};
 // Constant: value of one key in cost units
 const KEY_VALUE = 1250000;
 
+// Keep track of whether to show inactive objects
+let showInactive = false;
+
 // Initial data load
 (async function init() {
   let dataLoaded = false;
   // Try to load gameobjects
   try {
     const data = await loadJSON('gameobjects_final.json');
-    objects = Array.isArray(data) ? data.filter(obj => obj.is_active) : [];
+    // Initially filter out inactive objects unless showInactive is true
+    objects = Array.isArray(data) ? data.filter(obj => obj.is_active || showInactive) : [];
     dataLoaded = true;
   } catch (err) {
     console.error('Failed to load gameobjects_final.json:', err);
@@ -148,11 +152,13 @@ document.getElementById('sort-select').onchange = (e) => {
   renderCards();
 };
 
-// Render cards based on current type and sorting
+// Render cards based on current type and sorting, and active status
 function renderCards() {
   const container = document.getElementById('cards');
   container.innerHTML = '';
+  // Filter by type and active status
   let filtered = currentType === 'ALL' ? objects : objects.filter(o => o.type === currentType);
+  filtered = showInactive ? filtered : filtered.filter(o => o.is_active);
   // Sort according to user preference
   filtered = sortObjects(filtered);
   // Separate cards that have reached maximum level; they will be displayed last
@@ -216,7 +222,7 @@ function renderCards() {
     header.className = 'card-row card-header';
     const info = document.createElement('div');
     info.className = 'card-info';
-    info.innerHTML = `<h3>${obj.name || obj.id}</h3><small>Level: ${lvl} | Max: ${maxIndex} | ${obj.id}</small>`;
+    info.innerHTML = `<h3>${obj.name || obj.id}</h3><small>Level: ${lvl} | Max: ${maxIndex}</small>`;
     // Level controls
     const controls = document.createElement('div');
     controls.className = 'level-controls';
@@ -422,5 +428,14 @@ function renderStats() {
     totalPop += (curr.population ?? 0);
   });
   const bar = document.getElementById('stats-bar');
-  bar.textContent = `Total Profit: ${totalProfit.toLocaleString()} | Total Population: ${totalPop.toLocaleString()}`;
+  bar.textContent = `Total Cards: ${objects.length} | Total Profit: ${totalProfit.toLocaleString()} | Total Population: ${totalPop.toLocaleString()}`; // Added total cards
 }
+
+// Add event listener for the show/hide inactive checkbox
+document.getElementById('show-inactive-checkbox').onchange = (e) => {
+  showInactive = e.target.checked;
+  renderCards();
+};
+
+// Initial render of cards with the default showInactive setting
+renderCards();
