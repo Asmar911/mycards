@@ -258,7 +258,7 @@ function renderCards() {
     // Stats row: cost, income, population
     const statsRow = document.createElement('div');
     statsRow.className = 'card-row card-stats';
-    statsRow.innerHTML = `<span>${costDisplay}${marks}</span><span>${income}</span><span>${pop}</span>`;
+    statsRow.innerHTML = `<span>Cost: ${costDisplay}${marks}</span><span>Income: ${income.toLocaleString()}</span><span>Population: ${pop.toLocaleString()}</span>`;
     // ROI row
     const roiRow = document.createElement('div');
     roiRow.className = 'card-row card-roi';
