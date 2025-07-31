@@ -1,0 +1,174 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f1f1;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+/* Top toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+select {
+  padding: 0.25rem;
+}
+button.save-btn {
+  background: #168acd;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button.save-btn:hover {
+  background: #126ca3;
+}
+/* Cards list */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-bottom: 4rem; /* space for bottom bar */
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* Highlight cards that have reached the maximum level */
+.card.max-level {
+  background: #fff9e6;
+  border: 1px solid #f5c150;
+}
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #168acd;
+}
+.card small {
+  color: #666;
+}
+.level-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.level-controls button {
+  background: #40a7e3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.level-controls button:hover {
+  background: #168acd;
+}
+/* Style for level input field */
+.level-controls input[type="number"] {
+  width: 3rem;
+  padding: 0.2rem 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* New card row layouts */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.card-header {
+  margin-bottom: 0.3rem;
+}
+.card-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #168acd;
+}
+.card-info small {
+  color: #666;
+  font-size: 0.8rem;
+}
+.card-stats span,
+.card-roi span {
+  flex: 1 1 30%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.card-roi {
+  margin-top: 0.3rem;
+}
+/* Bottom tab bar */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.bottom-bar button {
+  background: #f1f1f1;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #168acd;
+}
+.bottom-bar button.active {
+  background: #168acd;
+  color: #fff;
+  font-weight: bold;
+}
+.bottom-bar button:hover {
+  background: #c8e2f5;
+}
+@media (min-width: 600px) {
+  /* On larger screens, allow cards side‑by‑side */
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - 0.5rem);
+  }
+}
+@media (min-width: 900px) {
+  .card {
+    width: calc(33.333% - 0.66rem);
+  }
+}
