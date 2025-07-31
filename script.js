@@ -280,6 +280,47 @@ document.getElementById('download-btn').onclick = () => {
   URL.revokeObjectURL(url);
 };
 
+// Load levels from a user-selected JSON file
+document.getElementById('load-btn').onclick = () => {
+  document.getElementById('load-levels-input').click();
+};
+
+document.getElementById('load-levels-input').onchange = (event) => {
+  const file = event.target.files[0];
+  if (!file) {
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const loadedLevels = JSON.parse(e.target.result);
+      // Basic validation to ensure it's a plausible levels file
+      if (typeof loadedLevels === 'object' && loadedLevels !== null) {
+        levels = loadedLevels;
+        // Re-clamp level values after loading
+        objects.forEach(o => {
+          if (levels[o.id] == null) levels[o.id] = 0;
+          const maxIndex = o.levels.length;
+          if (levels[o.id] > maxIndex) levels[o.id] = maxIndex;
+          if (levels[o.id] < 0) levels[o.id] = 0;
+        });
+        localStorage.setItem('object_levels', JSON.stringify(levels));
+        renderCards();
+        renderStats();
+        alert('Levels loaded successfully!');
+      } else {
+        alert('Invalid file format.');
+      }
+    } catch (err) {
+      alert('Error reading or parsing file.');
+      console.error(err);
+    }
+  };
+  reader.readAsText(file);
+  // Reset file input so the same file can be loaded again
+  event.target.value = '';
+};
+
 // Populate discount settings fields
 function renderDiscountFields() {
   const container = document.getElementById('discount-fields');
