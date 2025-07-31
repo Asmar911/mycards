@@ -216,7 +216,7 @@ function renderCards() {
     header.className = 'card-row card-header';
     const info = document.createElement('div');
     info.className = 'card-info';
-    info.innerHTML = `<h3>${obj.name || obj.id}</h3><small>Level: ${lvl} | Max: ${maxIndex}</small><small>${obj.id}</small>`;
+    info.innerHTML = `<h3>${obj.name || obj.id}</h3><small>Level: ${lvl} | Max: ${maxIndex} | ${obj.id}</small>`;
     // Level controls
     const controls = document.createElement('div');
     controls.className = 'level-controls';
