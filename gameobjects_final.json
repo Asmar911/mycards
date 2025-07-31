@@ -205,7 +205,8 @@
         "keys_cost": 6,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Suburban House"
   },
   {
     "id": "obj_cit_002",
@@ -413,7 +414,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cottage"
   },
   {
     "id": "obj_ind_069",
@@ -621,7 +623,8 @@
         "keys_cost": 10793,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Weather Station"
   },
   {
     "id": "obj_cit_003",
@@ -829,7 +832,8 @@
         "keys_cost": 55,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Villa"
   },
   {
     "id": "obj_cit_004",
@@ -1037,7 +1041,8 @@
         "keys_cost": 31,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Townhouse"
   },
   {
     "id": "obj_twn_000",
@@ -1245,7 +1250,8 @@
         "keys_cost": 5,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Holder's House"
   },
   {
     "id": "obj_twn_038",
@@ -1453,7 +1459,8 @@
         "keys_cost": 2949,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Planetarium"
   },
   {
     "id": "obj_cit_005",
@@ -1661,7 +1668,8 @@
         "keys_cost": 128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Apartment Building"
   },
   {
     "id": "obj_cit_006",
@@ -1869,7 +1877,8 @@
         "keys_cost": 586,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Residential Complex"
   },
   {
     "id": "obj_ind_011",
@@ -2077,7 +2086,8 @@
         "keys_cost": 29,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sawmill"
   },
   {
     "id": "obj_ind_003",
@@ -2285,7 +2295,8 @@
         "keys_cost": 139,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Factory"
   },
   {
     "id": "obj_cit_007",
@@ -2493,7 +2504,8 @@
         "keys_cost": 2315,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Skyscraper"
   },
   {
     "id": "obj_cit_008",
@@ -2701,7 +2713,8 @@
         "keys_cost": 31,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Motel"
   },
   {
     "id": "obj_cit_009",
@@ -2909,7 +2922,8 @@
         "keys_cost": 128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Hotel"
   },
   {
     "id": "obj_cit_010",
@@ -3117,7 +3131,8 @@
         "keys_cost": 586,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Resort"
   },
   {
     "id": "obj_cit_011",
@@ -3325,7 +3340,8 @@
         "keys_cost": 9,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mini-house"
   },
   {
     "id": "obj_cit_012",
@@ -3533,7 +3549,8 @@
         "keys_cost": 21,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tropical Bungalow"
   },
   {
     "id": "obj_ind_012",
@@ -3741,7 +3758,8 @@
         "keys_cost": 592,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Winery"
   },
   {
     "id": "obj_ind_035",
@@ -3949,7 +3967,8 @@
         "keys_cost": 128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mill"
   },
   {
     "id": "obj_cit_013",
@@ -4157,7 +4176,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Country Cottage"
   },
   {
     "id": "obj_cit_014",
@@ -4365,7 +4385,8 @@
         "keys_cost": 31,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Guest House"
   },
   {
     "id": "obj_cit_015",
@@ -4573,7 +4594,8 @@
         "keys_cost": 55,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Eco House"
   },
   {
     "id": "obj_cit_016",
@@ -4781,7 +4803,8 @@
         "keys_cost": 55,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ranch"
   },
   {
     "id": "obj_cit_017",
@@ -4989,7 +5012,8 @@
         "keys_cost": 128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Alpine Chalet"
   },
   {
     "id": "obj_cit_018",
@@ -5197,7 +5221,8 @@
         "keys_cost": 128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Waterfront House"
   },
   {
     "id": "obj_cit_019",
@@ -5405,7 +5430,8 @@
         "keys_cost": 128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Boarding House"
   },
   {
     "id": "obj_twn_004",
@@ -5613,7 +5639,8 @@
         "keys_cost": 50,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Park"
   },
   {
     "id": "obj_cit_020",
@@ -5821,7 +5848,8 @@
         "keys_cost": 289,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Old Town"
   },
   {
     "id": "obj_inc_001",
@@ -6029,7 +6057,8 @@
         "keys_cost": 5,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Shop"
   },
   {
     "id": "obj_inc_002",
@@ -6237,7 +6266,8 @@
         "keys_cost": 18,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Supermarket"
   },
   {
     "id": "obj_inc_003",
@@ -6445,7 +6475,8 @@
         "keys_cost": 72,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Department Store"
   },
   {
     "id": "obj_inc_004",
@@ -6653,7 +6684,8 @@
         "keys_cost": 332,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Shopping Plaza"
   },
   {
     "id": "obj_inc_005",
@@ -6861,7 +6893,8 @@
         "keys_cost": 6,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Coffee Shop"
   },
   {
     "id": "obj_inc_006",
@@ -7069,7 +7102,8 @@
         "keys_cost": 23,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Restaurant"
   },
   {
     "id": "obj_inc_007",
@@ -7277,7 +7311,8 @@
         "keys_cost": 8,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Market"
   },
   {
     "id": "obj_inc_008",
@@ -7485,7 +7520,8 @@
         "keys_cost": 38,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Foodcourt"
   },
   {
     "id": "obj_inc_009",
@@ -7693,7 +7729,8 @@
         "keys_cost": 72,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Office Building"
   },
   {
     "id": "obj_inc_010",
@@ -7901,7 +7938,8 @@
         "keys_cost": 332,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Office Tower"
   },
   {
     "id": "obj_inc_011",
@@ -8109,7 +8147,8 @@
         "keys_cost": 1253,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Commercial District"
   },
   {
     "id": "obj_inc_012",
@@ -8317,7 +8356,8 @@
         "keys_cost": 6,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bakery"
   },
   {
     "id": "obj_inc_013",
@@ -8525,7 +8565,8 @@
         "keys_cost": 8,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bookstore"
   },
   {
     "id": "obj_inc_014",
@@ -8733,7 +8774,8 @@
         "keys_cost": 8,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Barbershop"
   },
   {
     "id": "obj_inc_015",
@@ -8941,7 +8983,8 @@
         "keys_cost": 11,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Beauty Salon"
   },
   {
     "id": "obj_inc_016",
@@ -9149,7 +9192,8 @@
         "keys_cost": 18,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Gym"
   },
   {
     "id": "obj_inc_017",
@@ -9357,7 +9401,8 @@
         "keys_cost": 38,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fashion Boutique"
   },
   {
     "id": "obj_inc_018",
@@ -9565,7 +9610,8 @@
         "keys_cost": 38,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Craft Fair"
   },
   {
     "id": "obj_inc_019",
@@ -9773,7 +9819,8 @@
         "keys_cost": 38,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tennis Courts"
   },
   {
     "id": "obj_twn_003",
@@ -9981,7 +10028,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fountain"
   },
   {
     "id": "obj_inc_020",
@@ -10189,7 +10237,8 @@
         "keys_cost": 72,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bank"
   },
   {
     "id": "obj_inc_021",
@@ -10397,7 +10446,8 @@
         "keys_cost": 332,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cinema"
   },
   {
     "id": "obj_inc_022",
@@ -10605,7 +10655,8 @@
         "keys_cost": 107,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Nightclub"
   },
   {
     "id": "obj_inc_030",
@@ -10813,7 +10864,8 @@
         "keys_cost": 2550,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Aquarium"
   },
   {
     "id": "obj_inc_023",
@@ -11021,7 +11073,8 @@
         "keys_cost": 332,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Game Center"
   },
   {
     "id": "obj_inc_024",
@@ -11229,7 +11282,8 @@
         "keys_cost": 146,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Circus"
   },
   {
     "id": "obj_cit_031",
@@ -11437,7 +11491,8 @@
         "keys_cost": 12205,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fortress House"
   },
   {
     "id": "obj_inc_026",
@@ -11645,7 +11700,8 @@
         "keys_cost": 1253,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Conference Center"
   },
   {
     "id": "obj_inc_028",
@@ -11853,7 +11909,8 @@
         "keys_cost": 582,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Concert Hall"
   },
   {
     "id": "obj_ind_047",
@@ -12061,7 +12118,8 @@
         "keys_cost": 2874,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Printing House"
   },
   {
     "id": "obj_inc_029",
@@ -12269,7 +12327,8 @@
         "keys_cost": 428,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Brewery"
   },
   {
     "id": "obj_inc_027",
@@ -12477,7 +12536,8 @@
         "keys_cost": 1253,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Racetrack"
   },
   {
     "id": "obj_twn_026",
@@ -12685,7 +12745,8 @@
         "keys_cost": 28,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Art Gallery"
   },
   {
     "id": "obj_inc_032",
@@ -12893,7 +12954,8 @@
         "keys_cost": 4111,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Stock Exchange"
   },
   {
     "id": "obj_inc_031",
@@ -13101,7 +13163,8 @@
         "keys_cost": 1253,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Theme Park"
   },
   {
     "id": "obj_ind_001",
@@ -13309,7 +13372,8 @@
         "keys_cost": 29,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Manufactury"
   },
   {
     "id": "obj_ind_002",
@@ -13517,7 +13581,8 @@
         "keys_cost": 139,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Power Plant"
   },
   {
     "id": "obj_ind_004",
@@ -13725,7 +13790,8 @@
         "keys_cost": 61,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Farm"
   },
   {
     "id": "obj_ind_005",
@@ -13933,7 +13999,8 @@
         "keys_cost": 264,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Agricultural Complex"
   },
   {
     "id": "obj_ind_006",
@@ -14141,7 +14208,8 @@
         "keys_cost": 592,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Amusement Park"
   },
   {
     "id": "obj_ind_008",
@@ -14349,7 +14417,8 @@
         "keys_cost": 6,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Greenhouse"
   },
   {
     "id": "obj_ind_009",
@@ -14557,7 +14626,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Water Treatment Plant"
   },
   {
     "id": "obj_ind_010",
@@ -14765,7 +14835,8 @@
         "keys_cost": 29,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fish Farm"
   },
   {
     "id": "obj_ind_016",
@@ -14973,7 +15044,8 @@
         "keys_cost": 6086,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Science Center"
   },
   {
     "id": "obj_ind_015",
@@ -15181,7 +15253,8 @@
         "keys_cost": 2612,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Climate Research Center"
   },
   {
     "id": "obj_ind_017",
@@ -15389,7 +15462,8 @@
         "keys_cost": 1303,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Logistics Center"
   },
   {
     "id": "obj_twn_001",
@@ -15597,7 +15671,8 @@
         "keys_cost": 18,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Monument"
   },
   {
     "id": "obj_twn_002",
@@ -15805,7 +15880,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Square"
   },
   {
     "id": "obj_ind_019",
@@ -16013,7 +16089,8 @@
         "keys_cost": 6086,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mining Enterprise"
   },
   {
     "id": "obj_ind_020",
@@ -16221,7 +16298,8 @@
         "keys_cost": 9116,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Data Center"
   },
   {
     "id": "obj_twn_006",
@@ -16429,7 +16507,8 @@
         "keys_cost": 4672,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Research Center"
   },
   {
     "id": "obj_twn_007",
@@ -16637,7 +16716,8 @@
         "keys_cost": 28,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Kindergarten"
   },
   {
     "id": "obj_twn_012",
@@ -16845,7 +16925,8 @@
         "keys_cost": 1097,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "University"
   },
   {
     "id": "obj_twn_009",
@@ -17053,7 +17134,8 @@
         "keys_cost": 112,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "School"
   },
   {
     "id": "obj_twn_010",
@@ -17261,7 +17343,8 @@
         "keys_cost": 328,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Museum"
   },
   {
     "id": "obj_twn_013",
@@ -17469,7 +17552,8 @@
         "keys_cost": 27,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pharmacy"
   },
   {
     "id": "obj_twn_014",
@@ -17677,7 +17761,8 @@
         "keys_cost": 194,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Hospital"
   },
   {
     "id": "obj_twn_015",
@@ -17885,7 +17970,8 @@
         "keys_cost": 90,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Parking"
   },
   {
     "id": "obj_twn_016",
@@ -18093,7 +18179,8 @@
         "keys_cost": 382,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Swimming Pool"
   },
   {
     "id": "obj_twn_017",
@@ -18301,7 +18388,8 @@
         "keys_cost": 178,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Zoo"
   },
   {
     "id": "obj_twn_018",
@@ -18509,7 +18597,8 @@
         "keys_cost": 11,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Graveyard"
   },
   {
     "id": "obj_twn_019",
@@ -18717,7 +18806,8 @@
         "keys_cost": 24,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Police Station"
   },
   {
     "id": "obj_twn_020",
@@ -18925,7 +19015,8 @@
         "keys_cost": 47,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fire House"
   },
   {
     "id": "obj_twn_021",
@@ -19133,7 +19224,8 @@
         "keys_cost": 90,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bus Terminal"
   },
   {
     "id": "obj_twn_022",
@@ -19341,7 +19433,8 @@
         "keys_cost": 178,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Railroad Terminal"
   },
   {
     "id": "obj_twn_023",
@@ -19549,7 +19642,8 @@
         "keys_cost": 382,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Airport"
   },
   {
     "id": "obj_twn_025",
@@ -19757,7 +19851,8 @@
         "keys_cost": 3930,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Spaceport"
   },
   {
     "id": "obj_twn_030",
@@ -19965,7 +20060,8 @@
         "keys_cost": 112,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Music School"
   },
   {
     "id": "obj_twn_029",
@@ -20173,7 +20269,8 @@
         "keys_cost": 38,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crematorium"
   },
   {
     "id": "obj_twn_027",
@@ -20381,7 +20478,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Post Office"
   },
   {
     "id": "obj_twn_031",
@@ -20589,7 +20687,8 @@
         "keys_cost": 112,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Extreme Park"
   },
   {
     "id": "obj_twn_032",
@@ -20797,7 +20896,8 @@
         "keys_cost": 156,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Community Center"
   },
   {
     "id": "obj_twn_033",
@@ -21005,7 +21105,8 @@
         "keys_cost": 256,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Prison"
   },
   {
     "id": "obj_twn_034",
@@ -21213,7 +21314,8 @@
         "keys_cost": 382,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Beach"
   },
   {
     "id": "obj_twn_036",
@@ -21421,7 +21523,8 @@
         "keys_cost": 1350,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Marina"
   },
   {
     "id": "obj_twn_035",
@@ -21629,7 +21732,8 @@
         "keys_cost": 940,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Botanical Garden"
   },
   {
     "id": "obj_twn_040",
@@ -21837,7 +21941,8 @@
         "keys_cost": 3930,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Opera House"
   },
   {
     "id": "obj_spc_002",
@@ -21853,7 +21958,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_007",
@@ -22061,7 +22167,8 @@
         "keys_cost": 2612,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Stadium"
   },
   {
     "id": "obj_ind_040",
@@ -22269,7 +22376,8 @@
         "keys_cost": 3456,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Confectionery Factory"
   },
   {
     "id": "obj_twn_039",
@@ -22477,7 +22585,8 @@
         "keys_cost": 1350,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Science Museum"
   },
   {
     "id": "obj_twn_011",
@@ -22685,7 +22794,8 @@
         "keys_cost": 1476,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Theatre"
   },
   {
     "id": "obj_spc_012",
@@ -22701,7 +22811,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_twn_024",
@@ -22909,7 +23020,8 @@
         "keys_cost": 940,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Metro"
   },
   {
     "id": "obj_inc_025",
@@ -23117,7 +23229,8 @@
         "keys_cost": 332,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Car Dealership"
   },
   {
     "id": "obj_twn_005",
@@ -23325,7 +23438,8 @@
         "keys_cost": 1097,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Government House"
   },
   {
     "id": "obj_inc_047",
@@ -23533,7 +23647,8 @@
         "keys_cost": 406,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pizzeria"
   },
   {
     "id": "obj_ind_018",
@@ -23741,7 +23856,8 @@
         "keys_cost": 6086,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cargo Port"
   },
   {
     "id": "obj_twn_028",
@@ -23949,7 +24065,8 @@
         "keys_cost": 38,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bunker"
   },
   {
     "id": "obj_cit_036",
@@ -24157,7 +24274,8 @@
         "keys_cost": 3630,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Floating house"
   },
   {
     "id": "obj_inc_034",
@@ -24365,7 +24483,8 @@
         "keys_cost": 445,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Market Stalls"
   },
   {
     "id": "obj_cit_037",
@@ -24573,7 +24692,8 @@
         "keys_cost": 330,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Historic Mansion"
   },
   {
     "id": "obj_cit_071",
@@ -24781,7 +24901,8 @@
         "keys_cost": 820,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Hospice"
   },
   {
     "id": "obj_ind_033",
@@ -24989,7 +25110,8 @@
         "keys_cost": 887,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Dam"
   },
   {
     "id": "obj_spc_018",
@@ -25005,7 +25127,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_029",
@@ -25213,7 +25336,8 @@
         "keys_cost": 8440,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Health resort"
   },
   {
     "id": "obj_spc_014",
@@ -25229,7 +25353,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_013",
@@ -25437,7 +25562,8 @@
         "keys_cost": 592,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Waste Processing Plant"
   },
   {
     "id": "obj_ind_024",
@@ -25645,7 +25771,8 @@
         "keys_cost": 825,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Glass Factory"
   },
   {
     "id": "obj_ind_014",
@@ -25853,7 +25980,8 @@
         "keys_cost": 592,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Telecommunications Tower"
   },
   {
     "id": "obj_cit_021",
@@ -26061,7 +26189,8 @@
         "keys_cost": 21,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Treehouse"
   },
   {
     "id": "obj_spc_021",
@@ -26077,7 +26206,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_031",
@@ -26285,7 +26415,8 @@
         "keys_cost": 19411,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Large Hadron Collider"
   },
   {
     "id": "obj_spc_015",
@@ -26301,7 +26432,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_022",
@@ -26317,7 +26449,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_016",
@@ -26333,7 +26466,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_054",
@@ -26349,7 +26483,8 @@
         "keys_cost": 100,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_023",
@@ -26365,7 +26500,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_034",
@@ -26573,7 +26709,8 @@
         "keys_cost": 1147,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Lock"
   },
   {
     "id": "obj_cit_026",
@@ -26781,7 +26918,8 @@
         "keys_cost": 788,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Modular Home"
   },
   {
     "id": "obj_cit_025",
@@ -26989,7 +27127,8 @@
         "keys_cost": 489,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Maternity Hospital"
   },
   {
     "id": "obj_ind_077",
@@ -27197,7 +27336,8 @@
         "keys_cost": 19005,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Time Shop"
   },
   {
     "id": "obj_twn_037",
@@ -27405,7 +27545,8 @@
         "keys_cost": 2949,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Observatory"
   },
   {
     "id": "obj_spc_017",
@@ -27421,7 +27562,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_046",
@@ -27629,7 +27771,8 @@
         "keys_cost": 2126,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mushroom Farm"
   },
   {
     "id": "obj_ind_053",
@@ -27837,7 +27980,8 @@
         "keys_cost": 7303,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Radio Component Factory"
   },
   {
     "id": "obj_ind_027",
@@ -28045,7 +28189,8 @@
         "keys_cost": 10530,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Laboratory"
   },
   {
     "id": "obj_cit_024",
@@ -28253,7 +28398,8 @@
         "keys_cost": 144,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Izba"
   },
   {
     "id": "obj_inc_050",
@@ -28461,7 +28607,8 @@
         "keys_cost": 3118,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Paintball Center"
   },
   {
     "id": "obj_cit_046",
@@ -28669,7 +28816,8 @@
         "keys_cost": 942,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Igloo"
   },
   {
     "id": "obj_cit_040",
@@ -28877,7 +29025,8 @@
         "keys_cost": 355,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Camping"
   },
   {
     "id": "obj_spc_027",
@@ -29045,7 +29194,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_033",
@@ -29253,7 +29403,8 @@
         "keys_cost": 5,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ice Cream Stand"
   },
   {
     "id": "obj_spc_020",
@@ -29269,7 +29420,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_041",
@@ -29477,7 +29629,8 @@
         "keys_cost": 506,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fast Food Restaurant"
   },
   {
     "id": "obj_cit_022",
@@ -29685,7 +29838,8 @@
         "keys_cost": 31,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mobile Home"
   },
   {
     "id": "obj_ind_032",
@@ -29893,7 +30047,8 @@
         "keys_cost": 3840,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Metallurgical Plant"
   },
   {
     "id": "obj_cit_062",
@@ -30101,7 +30256,8 @@
         "keys_cost": 3678,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Hermit’s Hut"
   },
   {
     "id": "obj_twn_058",
@@ -30309,7 +30465,8 @@
         "keys_cost": 707,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "MFC"
   },
   {
     "id": "obj_ind_023",
@@ -30517,7 +30674,8 @@
         "keys_cost": 33,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mine"
   },
   {
     "id": "obj_inc_035",
@@ -30725,7 +30883,8 @@
         "keys_cost": 199,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mirror Maze"
   },
   {
     "id": "obj_cit_028",
@@ -30933,7 +31092,8 @@
         "keys_cost": 4321,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Loft"
   },
   {
     "id": "obj_inc_048",
@@ -31141,7 +31301,8 @@
         "keys_cost": 779,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pub"
   },
   {
     "id": "obj_twn_055",
@@ -31349,7 +31510,8 @@
         "keys_cost": 1267,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ice Sculpture Park"
   },
   {
     "id": "obj_inc_039",
@@ -31557,7 +31719,8 @@
         "keys_cost": 5,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Public Restroom"
   },
   {
     "id": "obj_ind_042",
@@ -31765,7 +31928,8 @@
         "keys_cost": 709,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Weaving factory"
   },
   {
     "id": "obj_twn_049",
@@ -31973,7 +32137,8 @@
         "keys_cost": 4318,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ice Palace"
   },
   {
     "id": "obj_ind_022",
@@ -32181,7 +32346,8 @@
         "keys_cost": 13,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Assembly Line"
   },
   {
     "id": "obj_ind_029",
@@ -32389,7 +32555,8 @@
         "keys_cost": 16154,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Technopark"
   },
   {
     "id": "obj_cit_023",
@@ -32597,7 +32764,8 @@
         "keys_cost": 44,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Dacha"
   },
   {
     "id": "obj_ind_037",
@@ -32805,7 +32973,8 @@
         "keys_cost": 5660,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Shipyard"
   },
   {
     "id": "obj_cit_027",
@@ -33013,7 +33182,8 @@
         "keys_cost": 1399,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Summer Camp"
   },
   {
     "id": "obj_inc_037",
@@ -33221,7 +33391,8 @@
         "keys_cost": 8079,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crypto District"
   },
   {
     "id": "obj_spc_028",
@@ -33237,7 +33408,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_040",
@@ -33445,7 +33617,8 @@
         "keys_cost": 258,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Flea Market"
   },
   {
     "id": "obj_twn_042",
@@ -33653,7 +33826,8 @@
         "keys_cost": 97,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Hall"
   },
   {
     "id": "obj_cit_030",
@@ -33861,7 +34035,8 @@
         "keys_cost": 13462,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Gothic House"
   },
   {
     "id": "obj_cit_076",
@@ -34069,7 +34244,8 @@
         "keys_cost": 2546,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Animal Nursery"
   },
   {
     "id": "obj_twn_043",
@@ -34277,7 +34453,8 @@
         "keys_cost": 11866,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ski Resort"
   },
   {
     "id": "obj_ind_092",
@@ -34445,7 +34622,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Observation Node"
   },
   {
     "id": "obj_spc_026",
@@ -34613,7 +34791,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_079",
@@ -34821,7 +35000,8 @@
         "keys_cost": 3392,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bee Farm"
   },
   {
     "id": "obj_inc_038",
@@ -35029,7 +35209,8 @@
         "keys_cost": 1616,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Veterinary Clinic"
   },
   {
     "id": "obj_spc_006",
@@ -35157,7 +35338,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_twn_044",
@@ -35365,7 +35547,8 @@
         "keys_cost": 7644,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Wedding Palace"
   },
   {
     "id": "obj_cit_034",
@@ -35573,7 +35756,8 @@
         "keys_cost": 516,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Farmstead"
   },
   {
     "id": "obj_inc_042",
@@ -35781,7 +35965,8 @@
         "keys_cost": 1599,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Antique Shop"
   },
   {
     "id": "obj_ind_030",
@@ -35989,7 +36174,8 @@
         "keys_cost": 9135,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Oil Platform"
   },
   {
     "id": "obj_ind_054",
@@ -36197,7 +36383,8 @@
         "keys_cost": 978,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Plastics Factory"
   },
   {
     "id": "obj_ind_025",
@@ -36405,7 +36592,8 @@
         "keys_cost": 2505,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Chocolate Factory"
   },
   {
     "id": "obj_twn_099",
@@ -36573,7 +36761,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Stable"
   },
   {
     "id": "obj_twn_050",
@@ -36781,7 +36970,8 @@
         "keys_cost": 10106,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Abandoned Hospital"
   },
   {
     "id": "obj_cit_035",
@@ -36989,7 +37179,8 @@
         "keys_cost": 6512,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Manor"
   },
   {
     "id": "obj_inc_044",
@@ -37197,7 +37388,8 @@
         "keys_cost": 356,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Souvenir Shop"
   },
   {
     "id": "obj_cit_033",
@@ -37405,7 +37597,8 @@
         "keys_cost": 1313,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Colorful houses"
   },
   {
     "id": "obj_twn_041",
@@ -37613,7 +37806,8 @@
         "keys_cost": 56,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Spa Center"
   },
   {
     "id": "obj_inc_043",
@@ -37821,7 +38015,8 @@
         "keys_cost": 7855,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Golf Club"
   },
   {
     "id": "obj_cit_041",
@@ -38029,7 +38224,8 @@
         "keys_cost": 70,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Yurt"
   },
   {
     "id": "obj_ind_021",
@@ -38237,7 +38433,8 @@
         "keys_cost": 10,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Warehouse"
   },
   {
     "id": "obj_cit_043",
@@ -38445,7 +38642,8 @@
         "keys_cost": 246,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Beach house"
   },
   {
     "id": "obj_cit_065",
@@ -38653,7 +38851,8 @@
         "keys_cost": 8142,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Iron House"
   },
   {
     "id": "obj_ind_026",
@@ -38861,7 +39060,8 @@
         "keys_cost": 3840,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Chemical Plant"
   },
   {
     "id": "obj_twn_047",
@@ -39069,7 +39269,8 @@
         "keys_cost": 911,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Playground"
   },
   {
     "id": "obj_cit_042",
@@ -39277,7 +39478,8 @@
         "keys_cost": 812,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Glamping"
   },
   {
     "id": "obj_cit_044",
@@ -39485,7 +39687,8 @@
         "keys_cost": 13854,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Palace"
   },
   {
     "id": "obj_ind_028",
@@ -39693,7 +39896,8 @@
         "keys_cost": 11388,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Railcar Factory"
   },
   {
     "id": "obj_cit_054",
@@ -39901,7 +40105,8 @@
         "keys_cost": 6124,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Underground City"
   },
   {
     "id": "obj_inc_052",
@@ -40109,7 +40314,8 @@
         "keys_cost": 399,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Car Wash"
   },
   {
     "id": "obj_cit_047",
@@ -40317,7 +40523,8 @@
         "keys_cost": 11948,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Castle"
   },
   {
     "id": "obj_twn_008",
@@ -40525,7 +40732,8 @@
         "keys_cost": 50,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Library"
   },
   {
     "id": "obj_twn_045",
@@ -40733,7 +40941,8 @@
         "keys_cost": 3877,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Multi-story Parking"
   },
   {
     "id": "obj_ng_01_020",
@@ -40749,7 +40958,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_009",
@@ -40765,7 +40975,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_003",
@@ -40781,7 +40992,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_004",
@@ -40797,7 +41009,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_005",
@@ -40813,7 +41026,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_008",
@@ -40829,7 +41043,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_010",
@@ -40845,7 +41060,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_011",
@@ -40861,7 +41077,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_013",
@@ -40877,7 +41094,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_048",
@@ -41085,7 +41303,8 @@
         "keys_cost": 50,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tent"
   },
   {
     "id": "obj_twn_051",
@@ -41293,7 +41512,8 @@
         "keys_cost": 354,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Well"
   },
   {
     "id": "obj_cit_038",
@@ -41501,7 +41721,8 @@
         "keys_cost": 34,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Wooden house"
   },
   {
     "id": "obj_twn_048",
@@ -41709,7 +41930,8 @@
         "keys_cost": 2135,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Lighthouse"
   },
   {
     "id": "obj_twn_046",
@@ -41917,7 +42139,8 @@
         "keys_cost": 6144,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ancient Ruins"
   },
   {
     "id": "obj_ind_036",
@@ -42125,7 +42348,8 @@
         "keys_cost": 2273,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Archaeological Excavations"
   },
   {
     "id": "obj_ind_043",
@@ -42333,7 +42557,8 @@
         "keys_cost": 10028,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ceramic Workshop"
   },
   {
     "id": "obj_inc_049",
@@ -42541,7 +42766,8 @@
         "keys_cost": 1390,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mining Farm"
   },
   {
     "id": "obj_cit_039",
@@ -42749,7 +42975,8 @@
         "keys_cost": 1922,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Dormitory"
   },
   {
     "id": "obj_inc_036",
@@ -42957,7 +43184,8 @@
         "keys_cost": 3060,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Perfume Shop"
   },
   {
     "id": "obj_ind_038",
@@ -43165,7 +43393,8 @@
         "keys_cost": 1655,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Conservatory"
   },
   {
     "id": "obj_inc_054",
@@ -43373,7 +43602,8 @@
         "keys_cost": 1079,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Dolphinarium"
   },
   {
     "id": "obj_spc_024",
@@ -43389,7 +43619,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_045",
@@ -43597,7 +43828,8 @@
         "keys_cost": 8287,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Casino"
   },
   {
     "id": "obj_ind_044",
@@ -43805,7 +44037,8 @@
         "keys_cost": 15795,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Brick Factory"
   },
   {
     "id": "obj_ind_039",
@@ -44013,7 +44246,8 @@
         "keys_cost": 216,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Toy Factory"
   },
   {
     "id": "obj_cit_045",
@@ -44221,7 +44455,8 @@
         "keys_cost": 154,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cabin"
   },
   {
     "id": "obj_cit_063",
@@ -44429,7 +44664,8 @@
         "keys_cost": 1223,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Stilt House"
   },
   {
     "id": "obj_inc_046",
@@ -44637,7 +44873,8 @@
         "keys_cost": 58,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Newsstand"
   },
   {
     "id": "obj_twn_054",
@@ -44845,7 +45082,8 @@
         "keys_cost": 362,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Forest Park"
   },
   {
     "id": "obj_inc_051",
@@ -45053,7 +45291,8 @@
         "keys_cost": 2040,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sushi Bar"
   },
   {
     "id": "obj_spc_035",
@@ -45221,7 +45460,8 @@
         "keys_cost": 1700,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_030",
@@ -45237,7 +45477,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_064",
@@ -45445,7 +45686,8 @@
         "keys_cost": 5159,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crypto Tower"
   },
   {
     "id": "obj_inc_055",
@@ -45653,7 +45895,8 @@
         "keys_cost": 1825,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Jewelry Workshop"
   },
   {
     "id": "obj_spc_034",
@@ -45669,7 +45912,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_036",
@@ -45685,7 +45929,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_045",
@@ -45893,7 +46138,8 @@
         "keys_cost": 459,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Paint Factory"
   },
   {
     "id": "obj_cit_032",
@@ -46101,7 +46347,8 @@
         "keys_cost": 3876,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Elite mansion"
   },
   {
     "id": "obj_twn_052",
@@ -46309,7 +46556,8 @@
         "keys_cost": 1015,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Water Tower"
   },
   {
     "id": "obj_cit_051",
@@ -46517,7 +46765,8 @@
         "keys_cost": 1290,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Round House"
   },
   {
     "id": "obj_inc_071",
@@ -46725,7 +46974,8 @@
         "keys_cost": 1251,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Hunting Store"
   },
   {
     "id": "obj_cit_064",
@@ -46933,7 +47183,8 @@
         "keys_cost": 2818,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crooked House"
   },
   {
     "id": "obj_cit_053",
@@ -47141,7 +47392,8 @@
         "keys_cost": 2630,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Gnome House"
   },
   {
     "id": "obj_inc_072",
@@ -47349,7 +47601,8 @@
         "keys_cost": 11476,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Space Center"
   },
   {
     "id": "obj_inc_073",
@@ -47557,7 +47810,8 @@
         "keys_cost": 6645,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Industrial Center"
   },
   {
     "id": "obj_inc_053",
@@ -47765,7 +48019,8 @@
         "keys_cost": 470,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Funeral Home"
   },
   {
     "id": "obj_spc_031",
@@ -47781,7 +48036,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_101",
@@ -47949,7 +48205,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Copperware Workshop"
   },
   {
     "id": "obj_twn_053",
@@ -48157,7 +48414,8 @@
         "keys_cost": 1431,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Philharmonic Hall"
   },
   {
     "id": "obj_ind_041",
@@ -48365,7 +48623,8 @@
         "keys_cost": 2612,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Dairy Factory"
   },
   {
     "id": "obj_ind_065",
@@ -48573,7 +48832,8 @@
         "keys_cost": 13145,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Arboretum"
   },
   {
     "id": "obj_twn_059",
@@ -48781,7 +49041,8 @@
         "keys_cost": 11702,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ministry of Simulation"
   },
   {
     "id": "obj_ind_048",
@@ -48989,7 +49250,8 @@
         "keys_cost": 1004,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Furniture Factory"
   },
   {
     "id": "obj_ind_049",
@@ -49197,7 +49459,8 @@
         "keys_cost": 213,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Distillery"
   },
   {
     "id": "obj_inc_056",
@@ -49405,7 +49668,8 @@
         "keys_cost": 1004,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Shooting Range"
   },
   {
     "id": "obj_inc_057",
@@ -49613,7 +49877,8 @@
         "keys_cost": 1103,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Disco Club"
   },
   {
     "id": "obj_cit_055",
@@ -49821,7 +50086,8 @@
         "keys_cost": 217,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Rock-Embedded House"
   },
   {
     "id": "obj_twn_056",
@@ -50029,7 +50295,8 @@
         "keys_cost": 576,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Rehabilitation Center"
   },
   {
     "id": "obj_ind_051",
@@ -50237,7 +50504,8 @@
         "keys_cost": 10280,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Underground Laboratory"
   },
   {
     "id": "obj_cit_052",
@@ -50445,7 +50713,8 @@
         "keys_cost": 8915,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Festive Cottage"
   },
   {
     "id": "obj_inc_059",
@@ -50653,7 +50922,8 @@
         "keys_cost": 107,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Creative Club"
   },
   {
     "id": "obj_cit_058",
@@ -50861,7 +51131,8 @@
         "keys_cost": 154,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Retirement Home"
   },
   {
     "id": "obj_twn_061",
@@ -51069,7 +51340,8 @@
         "keys_cost": 5703,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Embassy"
   },
   {
     "id": "obj_twn_062",
@@ -51277,7 +51549,8 @@
         "keys_cost": 246,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "College"
   },
   {
     "id": "obj_cit_049",
@@ -51485,7 +51758,8 @@
         "keys_cost": 739,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Commune"
   },
   {
     "id": "obj_cit_050",
@@ -51693,7 +51967,8 @@
         "keys_cost": 993,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Orphanage"
   },
   {
     "id": "obj_cit_056",
@@ -51901,7 +52176,8 @@
         "keys_cost": 92,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cave"
   },
   {
     "id": "obj_cit_057",
@@ -52109,7 +52385,8 @@
         "keys_cost": 1384,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mycologist’s House"
   },
   {
     "id": "obj_inc_058",
@@ -52317,7 +52594,8 @@
         "keys_cost": 39,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bowling"
   },
   {
     "id": "obj_ind_050",
@@ -52525,7 +52803,8 @@
         "keys_cost": 195,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cement Factory"
   },
   {
     "id": "obj_twn_057",
@@ -52733,7 +53012,8 @@
         "keys_cost": 2319,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ship Graveyard"
   },
   {
     "id": "obj_ind_055",
@@ -52941,7 +53221,8 @@
         "keys_cost": 665,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sausage Factory"
   },
   {
     "id": "obj_ind_052",
@@ -53149,7 +53430,8 @@
         "keys_cost": 2189,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Food Processing Plant"
   },
   {
     "id": "obj_twn_060",
@@ -53357,7 +53639,8 @@
         "keys_cost": 166,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Animal Shelter"
   },
   {
     "id": "obj_twn_063",
@@ -53565,7 +53848,8 @@
         "keys_cost": 3680,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Сourthouse"
   },
   {
     "id": "obj_inc_060",
@@ -53773,7 +54057,8 @@
         "keys_cost": 3213,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crypto Exchange"
   },
   {
     "id": "obj_inc_063",
@@ -53981,7 +54266,8 @@
         "keys_cost": 807,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Karaoke"
   },
   {
     "id": "obj_twn_064",
@@ -54189,7 +54475,8 @@
         "keys_cost": 2064,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tax Inspection"
   },
   {
     "id": "obj_inc_061",
@@ -54397,7 +54684,8 @@
         "keys_cost": 495,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sports Store"
   },
   {
     "id": "obj_twn_065",
@@ -54605,7 +54893,8 @@
         "keys_cost": 11051,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "University of Magic"
   },
   {
     "id": "obj_inc_062",
@@ -54813,7 +55102,8 @@
         "keys_cost": 5180,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "VR Club"
   },
   {
     "id": "obj_ind_066",
@@ -55021,7 +55311,8 @@
         "keys_cost": 18955,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Innovation Hub"
   },
   {
     "id": "obj_ind_067",
@@ -55229,7 +55520,8 @@
         "keys_cost": 11388,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Experimental Base"
   },
   {
     "id": "obj_cit_068",
@@ -55437,7 +55729,8 @@
         "keys_cost": 223,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Forest Cottage"
   },
   {
     "id": "obj_cit_070",
@@ -55645,7 +55938,8 @@
         "keys_cost": 1667,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Workers' Village"
   },
   {
     "id": "obj_twn_089",
@@ -55813,7 +56107,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Wax Museum"
   },
   {
     "id": "obj_cit_072",
@@ -56021,7 +56316,8 @@
         "keys_cost": 9908,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Chambers"
   },
   {
     "id": "obj_cit_073",
@@ -56229,7 +56525,8 @@
         "keys_cost": 942,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cabana"
   },
   {
     "id": "obj_ng_01_001",
@@ -56245,7 +56542,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_002",
@@ -56261,7 +56559,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_003",
@@ -56277,7 +56576,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_004",
@@ -56293,7 +56593,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_005",
@@ -56309,7 +56610,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_006",
@@ -56325,7 +56627,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_008",
@@ -56341,7 +56644,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_009",
@@ -56357,7 +56661,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_010",
@@ -56373,7 +56678,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_011",
@@ -56389,7 +56695,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_014",
@@ -56405,7 +56712,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_016",
@@ -56421,7 +56729,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_017",
@@ -56437,7 +56746,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_018",
@@ -56453,7 +56763,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_019",
@@ -56469,7 +56780,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_074",
@@ -56677,7 +56989,8 @@
         "keys_cost": 6202,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Capsule Hotel"
   },
   {
     "id": "obj_cit_059",
@@ -56885,7 +57198,8 @@
         "keys_cost": 7708,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ark"
   },
   {
     "id": "obj_cit_060",
@@ -57093,7 +57407,8 @@
         "keys_cost": 332,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Doghouse"
   },
   {
     "id": "obj_cit_061",
@@ -57301,7 +57616,8 @@
         "keys_cost": 223,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Dugout"
   },
   {
     "id": "obj_cit_066",
@@ -57509,7 +57825,8 @@
         "keys_cost": 10795,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "House on the Waterfall"
   },
   {
     "id": "obj_cit_067",
@@ -57717,7 +58034,8 @@
         "keys_cost": 492,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Straw House"
   },
   {
     "id": "obj_inc_065",
@@ -57925,7 +58243,8 @@
         "keys_cost": 6723,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ice Hotel"
   },
   {
     "id": "obj_spc_052",
@@ -57941,7 +58260,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_056",
@@ -58149,7 +58469,8 @@
         "keys_cost": 224,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Landfill"
   },
   {
     "id": "obj_ind_057",
@@ -58357,7 +58678,8 @@
         "keys_cost": 1579,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Elevator"
   },
   {
     "id": "obj_ind_058",
@@ -58565,7 +58887,8 @@
         "keys_cost": 1043,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Rubber Factory"
   },
   {
     "id": "obj_ind_060",
@@ -58773,7 +59096,8 @@
         "keys_cost": 4224,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Water Mill"
   },
   {
     "id": "obj_ind_059",
@@ -58981,7 +59305,8 @@
         "keys_cost": 2012,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Aqueduct"
   },
   {
     "id": "obj_ind_061",
@@ -59189,7 +59514,8 @@
         "keys_cost": 9490,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pump Station"
   },
   {
     "id": "obj_ind_062",
@@ -59397,7 +59723,8 @@
         "keys_cost": 20553,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Nuclear Reactor"
   },
   {
     "id": "obj_twn_066",
@@ -59605,7 +59932,8 @@
         "keys_cost": 8904,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crypt"
   },
   {
     "id": "obj_twn_067",
@@ -59813,7 +60141,8 @@
         "keys_cost": 5584,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Labyrinth"
   },
   {
     "id": "obj_twn_068",
@@ -60021,7 +60350,8 @@
         "keys_cost": 9613,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ancient Altar"
   },
   {
     "id": "obj_cit_075",
@@ -60229,7 +60559,8 @@
         "keys_cost": 1660,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bubble Hotel"
   },
   {
     "id": "obj_inc_066",
@@ -60437,7 +60768,8 @@
         "keys_cost": 5782,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Private Security Organization"
   },
   {
     "id": "obj_spc_033",
@@ -60525,7 +60857,8 @@
         "keys_cost": 0,
         "stars_cost": 6666
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_029",
@@ -60693,7 +61026,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_067",
@@ -60901,7 +61235,8 @@
         "keys_cost": 4993,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Aerodynamic Tunnel"
   },
   {
     "id": "obj_spc_007",
@@ -60917,7 +61252,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_019",
@@ -60933,7 +61269,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_068",
@@ -61141,7 +61478,8 @@
         "keys_cost": 600,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bathhouse"
   },
   {
     "id": "obj_inc_069",
@@ -61349,7 +61687,8 @@
         "keys_cost": 91,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fishing Gear Store"
   },
   {
     "id": "obj_inc_070",
@@ -61557,7 +61896,8 @@
         "keys_cost": 1304,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Martial Arts Center"
   },
   {
     "id": "obj_spc_055",
@@ -61573,7 +61913,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_063",
@@ -61781,7 +62122,8 @@
         "keys_cost": 13494,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Space Research Laboratory"
   },
   {
     "id": "obj_spc_032",
@@ -61869,7 +62211,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_037",
@@ -61885,7 +62228,8 @@
         "keys_cost": 0,
         "stars_cost": 99
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_025",
@@ -61901,7 +62245,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_064",
@@ -62109,7 +62454,8 @@
         "keys_cost": 7121,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Radio Station"
   },
   {
     "id": "obj_twn_069",
@@ -62317,7 +62663,8 @@
         "keys_cost": 1441,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Labor Exchange"
   },
   {
     "id": "obj_twn_070",
@@ -62525,7 +62872,8 @@
         "keys_cost": 729,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sobering Center"
   },
   {
     "id": "obj_twn_071",
@@ -62733,7 +63081,8 @@
         "keys_cost": 1269,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Trauma Center"
   },
   {
     "id": "obj_twn_072",
@@ -62941,7 +63290,8 @@
         "keys_cost": 1582,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Art Center"
   },
   {
     "id": "obj_spc_038",
@@ -62957,7 +63307,8 @@
         "keys_cost": 0,
         "stars_cost": 144
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_twn_073",
@@ -63165,7 +63516,8 @@
         "keys_cost": 878,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Vocational School"
   },
   {
     "id": "obj_inc_090",
@@ -63333,7 +63685,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fabric Bazaar"
   },
   {
     "id": "obj_spc_047",
@@ -63349,7 +63702,8 @@
         "keys_cost": 0,
         "stars_cost": 499
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_039",
@@ -63365,7 +63719,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_069",
@@ -63573,7 +63928,8 @@
         "keys_cost": 478,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Hostel"
   },
   {
     "id": "obj_ng_01_022",
@@ -63589,7 +63945,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_023",
@@ -63605,7 +63962,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_024",
@@ -63621,7 +63979,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_026",
@@ -63637,7 +63996,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_027",
@@ -63653,7 +64013,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_028",
@@ -63669,7 +64030,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_029",
@@ -63685,7 +64047,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_030",
@@ -63701,7 +64064,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_025",
@@ -63717,7 +64081,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_081",
@@ -63925,7 +64290,8 @@
         "keys_cost": 10931,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Chateau"
   },
   {
     "id": "obj_cit_082",
@@ -64133,7 +64499,8 @@
         "keys_cost": 6688,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Barndominium"
   },
   {
     "id": "obj_cit_086",
@@ -64301,7 +64668,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Duplex"
   },
   {
     "id": "obj_ind_068",
@@ -64509,7 +64877,8 @@
         "keys_cost": 13557,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Meteorological Laboratory"
   },
   {
     "id": "obj_inc_074",
@@ -64717,7 +65086,8 @@
         "keys_cost": 1836,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Garden Pavilion"
   },
   {
     "id": "obj_spc_041",
@@ -64733,7 +65103,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_040",
@@ -64749,7 +65120,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ng_01_021",
@@ -64765,7 +65137,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_098",
@@ -64933,7 +65306,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Architect's House"
   },
   {
     "id": "obj_inc_087",
@@ -65101,7 +65475,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Skate Club"
   },
   {
     "id": "obj_inc_088",
@@ -65269,7 +65644,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Beer Hall"
   },
   {
     "id": "obj_inc_089",
@@ -65437,7 +65813,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tea House"
   },
   {
     "id": "obj_ind_082",
@@ -65645,7 +66022,8 @@
         "keys_cost": 2874,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pottery Factory"
   },
   {
     "id": "obj_twn_090",
@@ -65813,7 +66191,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Astrologer’s Residence"
   },
   {
     "id": "obj_twn_081",
@@ -66021,7 +66400,8 @@
         "keys_cost": 7669,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Forest Lighthouse"
   },
   {
     "id": "obj_spc_056",
@@ -66037,7 +66417,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_083",
@@ -66205,7 +66586,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Microchip Depot"
   },
   {
     "id": "obj_ind_102",
@@ -66373,7 +66755,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Firewheel Workshop"
   },
   {
     "id": "obj_twn_091",
@@ -66541,7 +66924,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Writer’s Retreat"
   },
   {
     "id": "obj_ind_072",
@@ -66749,7 +67133,8 @@
         "keys_cost": 13583,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mask Workshop"
   },
   {
     "id": "obj_cit_105",
@@ -66917,7 +67302,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Garden Cooperative"
   },
   {
     "id": "obj_inc_080",
@@ -67125,7 +67511,8 @@
         "keys_cost": 6276,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Moss Cultivation Factory"
   },
   {
     "id": "obj_inc_081",
@@ -67333,7 +67720,8 @@
         "keys_cost": 9772,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bioluminescent Farm"
   },
   {
     "id": "obj_inc_082",
@@ -67541,7 +67929,8 @@
         "keys_cost": 10385,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sleep Laboratory"
   },
   {
     "id": "obj_inc_078",
@@ -67749,7 +68138,8 @@
         "keys_cost": 6656,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Income House"
   },
   {
     "id": "obj_twn_074",
@@ -67957,7 +68347,8 @@
         "keys_cost": 10438,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Jazz Philharmonic"
   },
   {
     "id": "obj_twn_075",
@@ -68165,7 +68556,8 @@
         "keys_cost": 21276,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Academy"
   },
   {
     "id": "obj_twn_076",
@@ -68373,7 +68765,8 @@
         "keys_cost": 3238,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Technical College"
   },
   {
     "id": "obj_twn_077",
@@ -68581,7 +68974,8 @@
         "keys_cost": 5522,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fountain Park"
   },
   {
     "id": "obj_twn_078",
@@ -68789,7 +69183,8 @@
         "keys_cost": 1333,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Donor Center"
   },
   {
     "id": "obj_inc_075",
@@ -68997,7 +69392,8 @@
         "keys_cost": 14322,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pawnshop"
   },
   {
     "id": "obj_ind_070",
@@ -69205,7 +69601,8 @@
         "keys_cost": 22380,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Contemplation Center"
   },
   {
     "id": "obj_ind_071",
@@ -69413,7 +69810,8 @@
         "keys_cost": 23566,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Explosives Factory"
   },
   {
     "id": "obj_inc_076",
@@ -69621,7 +70019,8 @@
         "keys_cost": 5629,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Water Park"
   },
   {
     "id": "obj_inc_077",
@@ -69829,7 +70228,8 @@
         "keys_cost": 4793,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Coworking"
   },
   {
     "id": "obj_cit_077",
@@ -70037,7 +70437,8 @@
         "keys_cost": 1380,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tiny house"
   },
   {
     "id": "obj_cit_078",
@@ -70245,7 +70646,8 @@
         "keys_cost": 5427,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Underground House"
   },
   {
     "id": "obj_cit_080",
@@ -70453,7 +70855,8 @@
         "keys_cost": 19917,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Condominium"
   },
   {
     "id": "obj_cit_079",
@@ -70661,7 +71064,8 @@
         "keys_cost": 13896,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Carriage Yard"
   },
   {
     "id": "obj_cit_083",
@@ -70869,7 +71273,8 @@
         "keys_cost": 2398,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Log House"
   },
   {
     "id": "obj_cit_084",
@@ -71077,7 +71482,8 @@
         "keys_cost": 3218,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "McMansion"
   },
   {
     "id": "obj_cit_085",
@@ -71285,7 +71691,8 @@
         "keys_cost": 3343,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cooperative Housing"
   },
   {
     "id": "obj_cit_087",
@@ -71453,7 +71860,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Alchemist's House"
   },
   {
     "id": "obj_won_001",
@@ -71469,7 +71877,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_002",
@@ -71485,7 +71894,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_003",
@@ -71501,7 +71911,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_004",
@@ -71517,7 +71928,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_005",
@@ -71533,7 +71945,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_089",
@@ -71701,7 +72114,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "House Among Sakura"
   },
   {
     "id": "obj_won_006",
@@ -71717,7 +72131,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_007",
@@ -71733,7 +72148,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_008",
@@ -71749,7 +72165,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_009",
@@ -71765,7 +72182,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_010",
@@ -71781,7 +72199,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_011",
@@ -71797,7 +72216,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_012",
@@ -71813,7 +72233,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_018",
@@ -71829,7 +72250,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_020",
@@ -71845,7 +72267,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_021",
@@ -71861,7 +72284,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_013",
@@ -71877,7 +72301,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_014",
@@ -71893,7 +72318,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_015",
@@ -71909,7 +72335,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_016",
@@ -71925,7 +72352,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_017",
@@ -71941,7 +72369,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_019",
@@ -71957,7 +72386,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_022",
@@ -71973,7 +72403,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_024",
@@ -71989,7 +72420,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_025",
@@ -72005,7 +72437,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_026",
@@ -72021,7 +72454,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_027",
@@ -72037,7 +72471,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_028",
@@ -72053,7 +72488,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_029",
@@ -72069,7 +72505,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_030",
@@ -72085,7 +72522,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_031",
@@ -72101,7 +72539,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_032",
@@ -72117,7 +72556,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_033",
@@ -72133,7 +72573,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_won_023",
@@ -72149,7 +72590,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_090",
@@ -72317,7 +72759,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Aquarium House"
   },
   {
     "id": "obj_twn_079",
@@ -72525,7 +72968,8 @@
         "keys_cost": 11913,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Seaport Terminal"
   },
   {
     "id": "obj_spc_046",
@@ -72541,7 +72985,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_106",
@@ -72709,7 +73154,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Old Finnish House"
   },
   {
     "id": "obj_inc_113",
@@ -72877,7 +73323,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Travel Agency Office"
   },
   {
     "id": "obj_cit_099",
@@ -73045,7 +73492,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Herbalist's Haven"
   },
   {
     "id": "obj_inc_091",
@@ -73213,7 +73661,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Optical Workshop"
   },
   {
     "id": "obj_inc_092",
@@ -73381,7 +73830,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Shoemaker's House"
   },
   {
     "id": "obj_inc_093",
@@ -73549,7 +73999,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Restorer's Workshop"
   },
   {
     "id": "obj_inc_094",
@@ -73717,7 +74168,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Engraver's Workshop"
   },
   {
     "id": "obj_twn_092",
@@ -73885,7 +74337,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ceramist's House"
   },
   {
     "id": "obj_inc_114",
@@ -74053,7 +74506,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Wine Boutique"
   },
   {
     "id": "obj_inc_115",
@@ -74221,7 +74675,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Order Pickup Point"
   },
   {
     "id": "obj_spc_044",
@@ -74237,7 +74692,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_043",
@@ -74253,7 +74709,8 @@
         "keys_cost": 0,
         "stars_cost": 149
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_116",
@@ -74421,7 +74878,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tea Shop"
   },
   {
     "id": "obj_spc_045",
@@ -74437,7 +74895,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_097",
@@ -74605,7 +75064,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Oil Depot"
   },
   {
     "id": "obj_ind_098",
@@ -74773,7 +75233,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Postal Sorting Center"
   },
   {
     "id": "obj_cit_091",
@@ -74941,7 +75402,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fairy Tale Terem"
   },
   {
     "id": "obj_cit_092",
@@ -75109,7 +75571,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fjord Cottage"
   },
   {
     "id": "obj_cit_093",
@@ -75277,7 +75740,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Clock Tower House"
   },
   {
     "id": "obj_cit_094",
@@ -75445,7 +75909,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Library House"
   },
   {
     "id": "obj_inc_083",
@@ -75653,7 +76118,8 @@
         "keys_cost": 15240,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Factory of Silence"
   },
   {
     "id": "obj_inc_084",
@@ -75861,7 +76327,8 @@
         "keys_cost": 10204,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Butterfly Farm"
   },
   {
     "id": "obj_twn_096",
@@ -76029,7 +76496,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Youth Center"
   },
   {
     "id": "obj_inc_085",
@@ -76237,7 +76705,8 @@
         "keys_cost": 11570,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Climate Simulation Center"
   },
   {
     "id": "obj_inc_086",
@@ -76405,7 +76874,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bio-Bean Plant"
   },
   {
     "id": "obj_spc_042",
@@ -76421,7 +76891,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_073",
@@ -76629,7 +77100,8 @@
         "keys_cost": 21010,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Game Development Studio"
   },
   {
     "id": "obj_ind_074",
@@ -76837,7 +77309,8 @@
         "keys_cost": 20553,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Memorial of Time"
   },
   {
     "id": "obj_ind_075",
@@ -77045,7 +77518,8 @@
         "keys_cost": 14551,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Garden of Scents"
   },
   {
     "id": "obj_spc_048",
@@ -77061,7 +77535,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_051",
@@ -77109,7 +77584,8 @@
         "keys_cost": 250,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_ind_076",
@@ -77317,7 +77793,8 @@
         "keys_cost": 17128,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Museum-House of the Future"
   },
   {
     "id": "obj_twn_083",
@@ -77525,7 +78002,8 @@
         "keys_cost": 5968,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Portal House"
   },
   {
     "id": "obj_spc_057",
@@ -77541,7 +78019,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_twn_097",
@@ -77709,7 +78188,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Blood Donation Point"
   },
   {
     "id": "obj_ind_084",
@@ -77877,7 +78357,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Gingerbread Factory"
   },
   {
     "id": "obj_twn_098",
@@ -78045,7 +78526,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Chess Club"
   },
   {
     "id": "obj_spc_058",
@@ -78061,7 +78543,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_cit_088",
@@ -78229,7 +78712,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Lava House"
   },
   {
     "id": "obj_spc_049",
@@ -78277,7 +78761,8 @@
         "keys_cost": 500,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_059",
@@ -78293,7 +78778,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_095",
@@ -78461,7 +78947,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Infusion Shop"
   },
   {
     "id": "obj_inc_096",
@@ -78629,7 +79116,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cryo Archive"
   },
   {
     "id": "obj_inc_097",
@@ -78797,7 +79285,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Geno Center"
   },
   {
     "id": "obj_inc_098",
@@ -78965,7 +79454,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Neuro Station"
   },
   {
     "id": "obj_inc_099",
@@ -79133,7 +79623,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Oyster Farm"
   },
   {
     "id": "obj_spc_050",
@@ -79149,7 +79640,8 @@
         "keys_cost": 10,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_100",
@@ -79317,7 +79809,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Jam Café"
   },
   {
     "id": "obj_inc_101",
@@ -79485,7 +79978,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fruit Stand"
   },
   {
     "id": "obj_inc_102",
@@ -79653,7 +80147,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Laundry Hall"
   },
   {
     "id": "obj_ind_078",
@@ -79861,7 +80356,8 @@
         "keys_cost": 20782,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "School of Shadow Arts"
   },
   {
     "id": "obj_ind_079",
@@ -80069,7 +80565,8 @@
         "keys_cost": 9740,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "House of Seven Crafts"
   },
   {
     "id": "obj_twn_080",
@@ -80277,7 +80774,8 @@
         "keys_cost": 19786,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tower of Dreams"
   },
   {
     "id": "obj_twn_082",
@@ -80485,7 +80983,8 @@
         "keys_cost": 9654,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Crystal House"
   },
   {
     "id": "obj_spc_001",
@@ -80501,7 +81000,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_spc_053",
@@ -80517,7 +81017,8 @@
         "keys_cost": 0,
         "stars_cost": 149
       }
-    ]
+    ],
+    "title": null
   },
   {
     "id": "obj_inc_103",
@@ -80685,7 +81186,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pixel Bar"
   },
   {
     "id": "obj_cit_096",
@@ -80853,7 +81355,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Stone House"
   },
   {
     "id": "obj_cit_095",
@@ -81021,7 +81524,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Violin House"
   },
   {
     "id": "obj_cit_097",
@@ -81189,7 +81693,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Egg House"
   },
   {
     "id": "obj_ind_080",
@@ -81397,7 +81902,8 @@
         "keys_cost": 14076,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Lumber Mill"
   },
   {
     "id": "obj_ind_081",
@@ -81605,7 +82111,8 @@
         "keys_cost": 15072,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Fuel Plant"
   },
   {
     "id": "obj_twn_084",
@@ -81813,7 +82320,8 @@
         "keys_cost": 10574,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "The Source"
   },
   {
     "id": "obj_twn_085",
@@ -81981,7 +82489,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "The Theater of Illusions"
   },
   {
     "id": "obj_twn_086",
@@ -82149,7 +82658,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "The Levitating House"
   },
   {
     "id": "obj_twn_087",
@@ -82317,7 +82827,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "The Mirror Oracle"
   },
   {
     "id": "obj_twn_088",
@@ -82485,7 +82996,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "The Transparent House"
   },
   {
     "id": "obj_ind_103",
@@ -82653,7 +83165,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Epidemiology Center"
   },
   {
     "id": "obj_cit_107",
@@ -82821,7 +83334,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Paper House"
   },
   {
     "id": "obj_cit_108",
@@ -82989,7 +83503,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pomegranate Branch House"
   },
   {
     "id": "obj_cit_109",
@@ -83157,7 +83672,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Leaffall Cabin"
   },
   {
     "id": "obj_inc_117",
@@ -83325,7 +83841,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Trading School"
   },
   {
     "id": "obj_inc_118",
@@ -83493,7 +84010,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Canopy Bazaar"
   },
   {
     "id": "obj_inc_119",
@@ -83661,7 +84179,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Street Lantern Shop"
   },
   {
     "id": "obj_twn_101",
@@ -83829,7 +84348,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Oasis"
   },
   {
     "id": "obj_twn_100",
@@ -83997,7 +84517,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bus Stop"
   },
   {
     "id": "obj_cit_100",
@@ -84165,7 +84686,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tree Core Cabin"
   },
   {
     "id": "obj_inc_104",
@@ -84333,7 +84855,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Tapestry Shop"
   },
   {
     "id": "obj_inc_105",
@@ -84501,7 +85024,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Brewing Room"
   },
   {
     "id": "obj_inc_106",
@@ -84669,7 +85193,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Lock Shop"
   },
   {
     "id": "obj_ind_085",
@@ -84837,7 +85362,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Metro Construction Bureau"
   },
   {
     "id": "obj_ind_086",
@@ -85005,7 +85531,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Subsystem Relay"
   },
   {
     "id": "obj_ind_087",
@@ -85173,7 +85700,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Risk Center"
   },
   {
     "id": "obj_ind_088",
@@ -85341,7 +85869,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Sanitary Unit"
   },
   {
     "id": "obj_ind_089",
@@ -85509,7 +86038,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Alternative Substation"
   },
   {
     "id": "obj_ind_090",
@@ -85677,7 +86207,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Urban Thermometer"
   },
   {
     "id": "obj_ind_091",
@@ -85845,7 +86376,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pedestrian Node"
   },
   {
     "id": "obj_ind_093",
@@ -86013,7 +86545,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Memory Upload Terminal"
   },
   {
     "id": "obj_twn_093",
@@ -86181,7 +86714,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Echo House"
   },
   {
     "id": "obj_cit_110",
@@ -86349,7 +86883,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Retirees' Club"
   },
   {
     "id": "obj_ind_099",
@@ -86517,7 +87052,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Ice Warehouse"
   },
   {
     "id": "obj_ind_100",
@@ -86685,7 +87221,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pharmaceutical Factory"
   },
   {
     "id": "obj_cit_101",
@@ -86853,7 +87390,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Lamplighter's House"
   },
   {
     "id": "obj_cit_102",
@@ -87021,7 +87559,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Hermit's Grotto"
   },
   {
     "id": "obj_cit_103",
@@ -87189,7 +87728,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Pine Dacha"
   },
   {
     "id": "obj_cit_104",
@@ -87357,7 +87897,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Snail Studio"
   },
   {
     "id": "obj_inc_107",
@@ -87525,7 +88066,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Bureau of Unusual Services"
   },
   {
     "id": "obj_inc_108",
@@ -87693,7 +88235,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Code Word Bar"
   },
   {
     "id": "obj_inc_109",
@@ -87861,7 +88404,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Old Photo Center"
   },
   {
     "id": "obj_inc_110",
@@ -88029,7 +88573,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Shoe Repair Booth"
   },
   {
     "id": "obj_inc_111",
@@ -88197,7 +88742,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Food Vending Machine"
   },
   {
     "id": "obj_inc_112",
@@ -88365,7 +88911,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Vegetable Stall"
   },
   {
     "id": "obj_ind_094",
@@ -88533,7 +89080,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Leaf Recycling Plant"
   },
   {
     "id": "obj_ind_095",
@@ -88701,7 +89249,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "City Boiler House"
   },
   {
     "id": "obj_ind_096",
@@ -88869,7 +89418,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Mineral Water Plant"
   },
   {
     "id": "obj_twn_094",
@@ -89037,7 +89587,8 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Cultural Basement"
   },
   {
     "id": "obj_twn_095",
@@ -89205,6 +89756,7 @@
         "keys_cost": 0,
         "stars_cost": 0
       }
-    ]
+    ],
+    "title": "Yoko Pond"
   }
 ]
