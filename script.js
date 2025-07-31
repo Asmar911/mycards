@@ -20,11 +20,17 @@ let showInactive = false;
 // Initial data load
 (async function init() {
   let dataLoaded = false;
-  // Try to load gameobjects
-  try {
+    // Try to load gameobjects
+    try {
     const data = await loadJSON('gameobjects_final.json');
-    // Initially filter out inactive objects unless showInactive is true
-    objects = Array.isArray(data) ? data.filter(obj => obj.is_active || showInactive) : [];
+    /*
+     * Do not filter objects by their active status during initial load.  The
+     * `showInactive` toggle should determine which cards are visible in
+     * `renderCards()`.  Filtering here permanently discards inactive
+     * objects and prevents them from ever being shown when the user
+     * enables the "show inactive" option.
+     */
+    objects = Array.isArray(data) ? data : [];
     dataLoaded = true;
   } catch (err) {
     console.error('Failed to load gameobjects_final.json:', err);
@@ -408,27 +414,34 @@ document.getElementById('settings-btn').onclick = () => {
 
 // Compute and render total cross profit and population across all objects at their current levels
 function renderStats() {
+  // Determine which objects are currently visible based on the selected type
+  // and the showInactive flag.  Only these objects contribute to the
+  // displayed card count and aggregated stats.
+  const filteredByType = currentType === 'ALL'
+    ? objects
+    : objects.filter(o => o.type === currentType);
+  const relevantObjects = showInactive
+    ? filteredByType
+    : filteredByType.filter(o => o.is_active);
   let totalProfit = 0;
   let totalPop = 0;
   /*
    * Cross metrics should accumulate values across levels 1 through the
    * current level. Level index 0 represents the base state and
    * therefore contributes no cross profit or population. When all
-   * cards are at level 0, the totals should be zero.
+   * cards are at level 0, the totals should be zero.  Only the currently
+   * visible cards are included in these totals so that the displayed
+   * counts and aggregates reflect what the user sees on the page.
    */
-  objects.forEach(obj => {
-    // For the current level of each object, calculate the incremental profit and
-    // population relative to the previous level using one-based indexing of
-    // upgrade levels (level 0 has no stats). For lvl = 0 the deltas are zero.
+  relevantObjects.forEach(obj => {
     const lvl = levels[obj.id] ?? 0;
-    // current upgrade stats reside at index lvl-1 in obj.levels
     const curr = lvl > 0 ? (obj.levels[lvl - 1] || {}) : {};
-    const prev = lvl > 1 ? (obj.levels[lvl - 2] || {}) : {};
     totalProfit += (curr.income_per_hour ?? 0);
     totalPop += (curr.population ?? 0);
   });
   const bar = document.getElementById('stats-bar');
-  bar.textContent = `Total Cards: ${objects.length} | Total Profit: ${totalProfit.toLocaleString()} | Total Population: ${totalPop.toLocaleString()}`; // Added total cards
+  const totalCards = relevantObjects.length;
+  bar.textContent = `Total Cards: ${totalCards} | Total Profit: ${totalProfit.toLocaleString()} | Total Population: ${totalPop.toLocaleString()}`;
 }
 
 // Add event listener for the show/hide inactive checkbox
