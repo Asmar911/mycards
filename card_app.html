@@ -4,181 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Card Simulator</title>
+<link rel="stylesheet" href="style.css">
 <style>
-  /* Global styles */
-  body {
-    font-family: Arial, sans-serif;
-    background: #f1f1f1;
-    margin: 0;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  /* Top toolbar */
-  .toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-    gap: 0.5rem;
-  }
-  .sort {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  select {
-    padding: 0.25rem;
-  }
-  button.save-btn {
-    background: #168acd;
-    color: #fff;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  button.save-btn:hover {
-    background: #126ca3;
-  }
-  /* Cards list */
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    flex: 1 1 auto;
-    overflow-y: auto;
-    padding-bottom: 4rem; /* space for bottom bar */
-  }
-  .card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  /* Highlight cards that have reached the maximum level */
-  .card.max-level {
-    background: #fff9e6;
-    border: 1px solid #f5c150;
-  }
-  .card h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #168acd;
-  }
-  .card small {
-    color: #666;
-  }
-  .level-controls {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  .level-controls button {
-    background: #40a7e3;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.3rem 0.6rem;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  .level-controls button:hover {
-    background: #168acd;
-  }
-  /* Style for level input field */
-  .level-controls input[type="number"] {
-    width: 3rem;
-    padding: 0.2rem 0.3rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  /* New card row layouts */
-  .card-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .card-header {
-    margin-bottom: 0.3rem;
-  }
-  .card-info h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #168acd;
-  }
-  .card-info small {
-    color: #666;
-    font-size: 0.8rem;
-  }
-  .card-stats span,
-  .card-roi span {
-    flex: 1 1 30%;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  .card-roi {
-    margin-top: 0.3rem;
-  }
-  /* Bottom tab bar */
-  .bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #fff;
-    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .bottom-bar button {
-    background: #f1f1f1;
-    border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: #168acd;
-  }
-  .bottom-bar button.active {
-    background: #168acd;
-    color: #fff;
-    font-weight: bold;
-  }
-  .bottom-bar button:hover {
-    background: #c8e2f5;
-  }
-  @media (min-width: 600px) {
-    /* On larger screens, allow cards side‑by‑side */
-    .cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    .card {
-      width: calc(50% - 0.5rem);
-    }
-  }
-  @media (min-width: 900px) {
-    .card {
-      width: calc(33.333% - 0.66rem);
-    }
-  }
+  /* Inline styles for specific elements can be added here if necessary, */
+  /* but most styling should be in style.css */
 </style>
 </head>
 <body>
@@ -202,17 +31,17 @@
     </div>
     <button class="save-btn" id="download-btn">Download levels</button>
     <!-- settings gear button -->
-    <button class="save-btn" id="settings-btn" title="Settings" style="background:#f1f1f1;color:#168acd;padding:0.4rem 0.6rem;">
+    <button id="settings-btn" title="Settings">
       ⚙️
     </button>
   </div>
   <!-- statistics bar for total cross profit and population -->
-  <div id="stats-bar" style="margin-bottom:0.5rem;font-weight:bold;color:#168acd;"></div>
+  <div id="stats-bar"></div>
   <!-- settings panel (hidden by default) -->
-  <div id="settings-panel" style="display:none;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);margin-bottom:0.5rem;">
-    <h4 style="margin-top:0">Discount Settings</h4>
-    <p style="font-size:0.9rem;color:#555;">Set a discount percentage for each type. Discount is applied to level costs when calculating ROI.</p>
-    <div id="discount-fields" style="display:flex;flex-direction:column;gap:0.5rem;"></div>
+  <div id="settings-panel">
+    <h4>Discount Settings</h4>
+    <p>Set a discount percentage for each type. Discount is applied to level costs when calculating ROI.</p>
+    <div id="discount-fields"></div>
   </div>
   <div class="cards" id="cards"></div>
   <div class="bottom-bar" id="bottom-tabs"></div>
@@ -247,11 +76,17 @@ const KEY_VALUE = 1250000;
   }
   // Try to load levels
   try {
-    levels = await loadJSON('object_levels.json');
-  } catch {
-    levels = {};
+    const storedLevels = localStorage.getItem('object_levels');
+    if (storedLevels) {
+        levels = JSON.parse(storedLevels);
+    } else {
+        levels = await loadJSON('object_levels.json');
+    }
+  } catch(err) {
+      console.warn('Failed to load object_levels.json or localStorage:', err);
+      levels = {};
   }
-  // ensure all objects have an entry
+  // ensure all objects have an entry and clamp levels
   objects.forEach(o => {
     if (levels[o.id] == null) levels[o.id] = 0;
     // Clamp loaded level values within allowed range
@@ -260,17 +95,19 @@ const KEY_VALUE = 1250000;
     if (levels[o.id] < 0) levels[o.id] = 0;
   });
   // Initialize discounts: load from localStorage if present
-  const stored = localStorage.getItem('discounts');
-  if (stored) {
-    try { discountByType = JSON.parse(stored); } catch { discountByType = {}; }
+  const storedDiscounts = localStorage.getItem('discounts');
+  if (storedDiscounts) {
+    try { discountByType = JSON.parse(storedDiscounts); } catch { discountByType = {}; }
   }
   // Ensure discount keys exist for each type
   objects.forEach(o => { if (discountByType[o.type] == null) discountByType[o.type] = 0; });
+
   // Render UI elements regardless of data loaded
   renderDiscountFields();
   renderBottomTabs();
   renderCards();
   renderStats();
+
   if (!dataLoaded) {
     // show message when data couldn't load
     const cardsDiv = document.getElementById('cards');
@@ -290,7 +127,7 @@ function renderBottomTabs() {
     btn.onclick = () => {
       currentType = typeValue;
       renderCards();
-      renderBottomTabs();
+      renderBottomTabs(); // re-render tabs to update active state
     };
     bar.appendChild(btn);
   };
@@ -330,12 +167,13 @@ function sortObjects(list) {
     const costB = computeAdjustedCost(b, lvlB);
     const profitA = computeProfit(a, lvlA);
     const profitB = computeProfit(b, lvlB);
-    const popA = computePop(a, lvlA);
-    const popB = computePop(b, lvlB);
     const dollarRoiA = costA > 0 ? (profitA * 100) / costA : 0;
     const dollarRoiB = costB > 0 ? (profitB * 100) / costB : 0;
+    const popA = computePop(a, lvlA);
+    const popB = computePop(b, lvlB);
     const popRoiA = costA > 0 ? (popA * 100) / costA : 0;
     const popRoiB = costB > 0 ? (popB * 100) / costB : 0;
+
     switch (sortOption) {
       case 'level-low-high': return (levels[a.id] ?? 0) - (levels[b.id] ?? 0);
       case 'level-high-low': return (levels[b.id] ?? 0) - (levels[a.id] ?? 0);
@@ -412,10 +250,10 @@ function renderCards() {
     // marks for keys and stars based on next level requirements
     let marks = '';
     if ((nextData.keys_cost ?? 0) > 0) {
-      marks += ' <span title="Requires Keys" style="color:#e69b00;">🔑</span>';
+      marks += '<span title="Requires Keys">🔑</span>';
     }
     if ((nextData.stars_cost ?? 0) > 0) {
-      marks += ' <span title="Requires Stars" style="color:#e69b00;">⭐</span>';
+      marks += '<span title="Requires Stars">⭐</span>';
     }
     // Apply special styling if at max level
     if (lvl >= maxIndex) {
@@ -426,7 +264,7 @@ function renderCards() {
     header.className = 'card-row card-header';
     const info = document.createElement('div');
     info.className = 'card-info';
-    info.innerHTML = `<h3>${obj.name || obj.id}</h3><small>ID: ${obj.id}</small>`;
+    info.innerHTML = `<h3>${obj.name || obj.id}</h3><small>Level: ${lvl} | Max: ${maxIndex}</small>`;
     // Level controls
     const controls = document.createElement('div');
     controls.className = 'level-controls';
@@ -456,7 +294,7 @@ function renderCards() {
     // Stats row: cost, income, population
     const statsRow = document.createElement('div');
     statsRow.className = 'card-row card-stats';
-    statsRow.innerHTML = `<span>Cost: ${costDisplay}${marks}</span><span>Income/hour: ${income}</span><span>Population: ${pop}</span>`;
+    statsRow.innerHTML = `<span>${costDisplay}${marks}</span><span>${income}</span><span>${pop}</span>`;
     // ROI row
     const roiRow = document.createElement('div');
     roiRow.className = 'card-row card-roi';
@@ -558,11 +396,11 @@ function renderStats() {
     // current upgrade stats reside at index lvl-1 in obj.levels
     const curr = lvl > 0 ? (obj.levels[lvl - 1] || {}) : {};
     const prev = lvl > 1 ? (obj.levels[lvl - 2] || {}) : {};
-    totalProfit += (curr.income_per_hour ?? 0) - (prev.income_per_hour ?? 0);
-    totalPop += (curr.population ?? 0) - (prev.population ?? 0);
+    totalProfit += (curr.income_per_hour ?? 0);
+    totalPop += (curr.population ?? 0);
   });
   const bar = document.getElementById('stats-bar');
-  bar.textContent = `Total Cross Profit: ${totalProfit.toLocaleString()} | Total Cross Population: ${totalPop.toLocaleString()}`;
+  bar.textContent = `Total Profit: ${totalProfit.toLocaleString()} | Total Population: ${totalPop.toLocaleString()}`;
 }
 </script>
 </body>
