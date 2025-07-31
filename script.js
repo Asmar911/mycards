@@ -167,19 +167,29 @@ function renderCards() {
   filtered = showInactive ? filtered : filtered.filter(o => o.is_active);
   // Sort according to user preference
   filtered = sortObjects(filtered);
-  // Separate cards that have reached maximum level; they will be displayed last
-  const nonMax = [];
+  // Separate cards into groups: active upgrades, zero-level, and fully upgraded.
+  // Cards with current level equal to 0 or at max level should be placed at the bottom
+  // so that mid‑progress cards are shown first.
+  const midProgress = [];
+  const zeroLevel = [];
   const maxed = [];
   filtered.forEach(obj => {
+    // current level for this object
     const lvl = levels[obj.id] ?? 0;
     const maxIndex = obj.levels.length;
-    if (lvl >= maxIndex) {
+    if (lvl === 0) {
+      // newly unlocked or unbuilt objects go below mid‑progress cards
+      zeroLevel.push(obj);
+    } else if (lvl >= maxIndex) {
+      // fully upgraded objects go to the bottom
       maxed.push(obj);
     } else {
-      nonMax.push(obj);
+      // objects in progress (between 1 and max-1) go at the top
+      midProgress.push(obj);
     }
   });
-  const ordered = [...nonMax, ...maxed];
+  // Order: mid‑progress first, then zero‑level, then maxed
+  const ordered = [...midProgress, ...zeroLevel, ...maxed];
   ordered.forEach(obj => {
     const card = document.createElement('div');
     card.className = 'card';
@@ -222,6 +232,9 @@ function renderCards() {
     // Apply special styling if at max level
     if (lvl >= maxIndex) {
       card.classList.add('max-level');
+    }
+    if (lvl == 0) {
+      card.classList.add('zero-level');
     }
     // Header row: name, ID, level controls
     const header = document.createElement('div');

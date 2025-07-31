@@ -168,6 +168,10 @@ button.save-btn:hover {
   background: #3a3a3d;
   border-color: #f5c150;
 }
+.card.zero-level {
+  background: #553838;
+  border-color: #f5c150;
+}
 
 .card h3 {
   margin: 0;
