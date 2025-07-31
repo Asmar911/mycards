@@ -1,3 +1,3 @@
 # mycards
 
-link([https://asmar911.github.io/mycards/])
+[link](https://asmar911.github.io/mycards/)
