@@ -25,12 +25,24 @@ body {
 }
 
 .sort {
+  position: fixed;
+  bottom: calc(6rem + 1rem); /* Height of bottom bar + some space */
+  right: 1rem;
+  background: #252526;
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  z-index: 1000; /* Ensure it's above other content */
 }
 
-select {
+.sort label {
+  color: #eee;
+}
+
+.sort select {
   padding: 0.5rem;
   border-radius: 4px;
   background: #333;
@@ -74,47 +86,60 @@ button.save-btn:hover {
 #stats-bar {
   margin-bottom: 1rem;
   font-weight: bold;
-  color: #007acc;
+  color: #00aacc;
   padding: 0 0.5rem;
 }
 
 /* Settings panel */
 #settings-panel {
   display: none;
-  background: #252526;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: #2d2d30;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
+  border: 1px solid #3a3a3a;
 }
 
 #settings-panel h4 {
   margin-top: 0;
-  color: #eee;
+  color: #00aacc;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 #settings-panel p {
   font-size: 0.9rem;
   color: #bbb;
+  margin-bottom: 1.5rem;
 }
 
 #discount-fields {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
+}
+
+#discount-fields div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #discount-fields label {
   color: #eee;
+  flex-grow: 1;
+  margin-right: 1rem;
 }
 
 #discount-fields input[type="number"] {
-  width: 80px;
-  padding: 0.4rem;
+  width: 60px;
+  padding: 0.5rem;
   border: 1px solid #555;
   border-radius: 4px;
   background: #333;
   color: #eee;
+  text-align: center;
 }
 
 /* Cards list */
@@ -274,12 +299,15 @@ button.save-btn:hover {
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
   padding: 0.8rem 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align items to the start */
   gap: 0.8rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .bottom-bar button {
+  flex: 0 0 auto; /* Prevent buttons from shrinking */
   background: #3a3a3d;
   color: #eee;
   border: none;
@@ -298,6 +326,16 @@ button.save-btn:hover {
 
 .bottom-bar button:hover:not(.active) {
   background: #555;
+}
+
+/* Hide scrollbar for a cleaner look (optional) */
+.bottom-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.bottom-bar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 @media (min-width: 600px) {
