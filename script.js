@@ -181,8 +181,8 @@ function renderCards() {
     // incremental profit and population for next level (growth)
     const income = (nextData.income_per_hour ?? 0) - (currData.income_per_hour ?? 0);
     const pop = (nextData.population ?? 0) - (currData.population ?? 0);
-    const dollarROI = adjustedCost > 0 ? ((income * 100) / adjustedCost).toFixed(2) : '∞';
-    const popROI = adjustedCost > 0 ? ((pop * 100) / adjustedCost).toFixed(2) : '∞';
+    const dollarROI = adjustedCost > 0 ? ((income * 100) / adjustedCost).toFixed(5) : '∞';
+    const popROI = adjustedCost > 0 ? ((pop * 100) / adjustedCost).toFixed(5) : '∞';
     // cost display with discount coloring
     let costDisplay;
     if (discount > 0 && baseCost > 0) {
