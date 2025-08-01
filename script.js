@@ -11,6 +11,14 @@ let currentType = 'ALL';
 let sortOption = 'none';
 // Mapping of type to discount percentage (0-100)
 let discountByType = {};
+
+// Global adjustments for aggregated profit and population.
+// profitPercent and popPercent are treated as percentage values (100 means 100%, 50 means 50%).
+// profitFixed and popFixed are fixed amounts added after the base totals are calculated.
+let profitPercent = 100;
+let profitFixed = 0;
+let popPercent = 100;
+let popFixed = 0;
 // Constant: value of one key in cost units
 const KEY_VALUE = 1250000;
 
@@ -42,9 +50,16 @@ let showInactive = false;
     if (loadedData && typeof loadedData === 'object') {
       levels = loadedData.levels || {};
       discountByType = loadedData.discounts || {};
+      // Load adjustment settings if present; default values otherwise
+      profitPercent = loadedData.profitPercent != null ? loadedData.profitPercent : profitPercent;
+      profitFixed = loadedData.profitFixed != null ? loadedData.profitFixed : profitFixed;
+      popPercent = loadedData.popPercent != null ? loadedData.popPercent : popPercent;
+      popFixed = loadedData.popFixed != null ? loadedData.popFixed : popFixed;
+      showInactive = loadedData.showInactive != null ? loadedData.showInactive : showInactive;          
     } else {
       levels = {};
       discountByType = {};
+      // adjustments remain at default values
     }
   } catch(err) {
       console.warn('Failed to load object_levels.json:', err);
@@ -66,6 +81,7 @@ let showInactive = false;
 
   // Render UI elements regardless of data loaded
   renderDiscountFields();
+  renderAdjustmentFields();
   renderBottomTabs();
   renderCards();
   renderStats();
@@ -108,11 +124,18 @@ function sortObjects(list) {
       // Cost for the next level (upgrade from current lvl to lvl+1)
       const nd = lvl < obj.levels.length ? (obj.levels[lvl] || {}) : {};
       let baseCost = nd.cost ?? 0;
+      // Determine whether the next level requires keys or stars
+      const hasKeysOrStars = (nd.keys_cost ?? 0) > 0 || (nd.stars_cost ?? 0) > 0;
+      // If no monetary cost but there are keys required, convert keys to monetary cost
       if ((!baseCost || baseCost === 0) && (nd.keys_cost ?? 0) > 0) {
         baseCost = (nd.keys_cost || 0) * KEY_VALUE;
       }
       const discount = discountByType[obj.type] ?? 0;
-      return baseCost > 0 ? baseCost * (1 - discount / 100) : 0;
+      // Apply discount only when base cost exists and the level is purely cost based (no keys or stars requirement)
+      if (baseCost > 0 && !hasKeysOrStars) {
+        return baseCost * (1 - discount / 100);
+      }
+      return baseCost;
     }
     function computeProfit(obj, lvl) {
       // incremental profit for next level (next - current)
@@ -202,23 +225,34 @@ function renderCards() {
     const prevData = lvl > 1 ? (obj.levels[lvl - 2] || {}) : {};
     // next level data used for upgrade cost and growth (if available)
     const nextData = lvl < maxIndex ? (obj.levels[lvl] || {}) : {};
-    // base cost for next level and discount
+    // base cost for next level and discount; apply discounts only to pure cost levels
     let baseCost = nextData.cost ?? 0;
+    // Determine whether the next level requires keys or stars
+    const hasKeysOrStars = (nextData.keys_cost ?? 0) > 0 || (nextData.stars_cost ?? 0) > 0;
+    // If no monetary cost but keys are required, convert keys to monetary cost for display/ROI purposes
     if ((!baseCost || baseCost === 0) && (nextData.keys_cost ?? 0) > 0) {
       baseCost = (nextData.keys_cost || 0) * KEY_VALUE;
     }
     const discount = discountByType[obj.type] ?? 0;
-    const adjustedCost = baseCost > 0 ? (baseCost * (1 - discount / 100)) : 0;
+    let adjustedCost;
+    let discountApplied = false;
+    if (baseCost > 0 && !hasKeysOrStars && discount > 0) {
+      adjustedCost = baseCost * (1 - discount / 100);
+      discountApplied = true;
+    } else {
+      adjustedCost = baseCost;
+    }
     // incremental profit and population for next level (growth)
     const income = (nextData.income_per_hour ?? 0) - (currData.income_per_hour ?? 0);
     const pop = (nextData.population ?? 0) - (currData.population ?? 0);
     const dollarROI = adjustedCost > 0 ? ((income * 100) / adjustedCost).toFixed(5) : '∞';
     const popROI = adjustedCost > 0 ? ((pop * 100) / adjustedCost).toFixed(5) : '∞';
-    // cost display with discount coloring
+    // cost display with discount coloring only when discount is applied
     let costDisplay;
-    if (discount > 0 && baseCost > 0) {
+    if (discountApplied) {
       costDisplay = `<span style="text-decoration: line-through; color:#999;">${baseCost.toLocaleString()}</span> → <span style="color:#d17c00; font-weight:bold;">${adjustedCost.toLocaleString()}</span>`;
     } else {
+      // If there is no cost but keys/stars are required, baseCost may be 0; display '-' when there is nothing to show
       costDisplay = adjustedCost ? adjustedCost.toLocaleString() : (baseCost ? baseCost.toLocaleString() : '-') ;
     }
     // marks for keys and stars based on next level requirements
@@ -308,7 +342,13 @@ function updateLevel(id, newLevel) {
 function saveLevelsAndDiscounts() {
     const dataToSave = {
         levels: levels,
-        discounts: discountByType
+        discounts: discountByType,
+        // include adjustment settings so they persist when exporting/importing
+        profitPercent: profitPercent,
+        profitFixed: profitFixed,
+        popPercent: popPercent,
+        popFixed: popFixed,
+        showInactive: showInactive
     };
     // Note: This part of the code is intended to be used in an environment where
     // we can write to a file. In a standard browser environment, this would
@@ -316,15 +356,39 @@ function saveLevelsAndDiscounts() {
     // For the purpose of this IDE simulation, we'll assume a file write is possible
     // or the download functionality is handled elsewhere.
     console.log('Saving data:', dataToSave);
+    // Persist the current state into localStorage so that the interface can
+    // restore user preferences (levels, discounts, adjustments and
+    // visibility of inactive objects) across page reloads.  Note that the
+    // application still relies on object_levels.json for a more permanent
+    // export/import mechanism.
+    try {
+      localStorage.setItem('object_levels', JSON.stringify(dataToSave));
+      localStorage.setItem('discounts', JSON.stringify(discountByType));
+    } catch (err) {
+      console.warn('Unable to save to localStorage:', err);
+    }
     // In a real application, you would use a backend API or similar to save this.
     // For this example, we'll just keep the download functionality.
 }
 
 // Download current levels and discounts as JSON when user clicks the save button
 document.getElementById('download-btn').onclick = () => {
+  /*
+   * Construct the object that will be written to object_levels.json.  In
+   * addition to the levels and discount mappings, persist any adjustment
+   * settings (profit/population multipliers and fixed adjustments) and the
+   * showInactive flag so that user preferences are retained when the file is
+   * re‑loaded.  Without including showInactive, toggling the checkbox
+   * wouldn't be preserved across sessions.
+   */
   const dataToDownload = {
     levels: levels,
-    discounts: discountByType
+    discounts: discountByType,
+    profitPercent: profitPercent,
+    profitFixed: profitFixed,
+    popPercent: popPercent,
+    popFixed: popFixed,
+    showInactive: showInactive
   };
   const blob = new Blob([JSON.stringify(dataToDownload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -351,10 +415,28 @@ document.getElementById('load-levels-input').onchange = (event) => {
   reader.onload = (e) => {
     try {
       const loadedData = JSON.parse(e.target.result);
-      // Basic validation to ensure it's a plausible file structure
+        // Basic validation to ensure it's a plausible file structure
       if (typeof loadedData === 'object' && loadedData !== null && loadedData.levels && loadedData.discounts) {
+        /*
+         * Replace existing data structures with those from the loaded file.
+         * Validate and sanitize values as needed.  Also apply persisted
+         * adjustment parameters and the showInactive flag.  If the latter
+         * is omitted from the file (for backward‑compatibility with
+         * pre‑existing files), keep the current checkbox state.  After
+         * loading, re‑clamp level values to ensure they are within valid
+         * bounds and refresh the UI.
+         */
         levels = loadedData.levels;
         discountByType = loadedData.discounts;
+        // Load adjustment values if provided
+        profitPercent = loadedData.profitPercent != null ? loadedData.profitPercent : profitPercent;
+        profitFixed = loadedData.profitFixed != null ? loadedData.profitFixed : profitFixed;
+        popPercent = loadedData.popPercent != null ? loadedData.popPercent : popPercent;
+        popFixed = loadedData.popFixed != null ? loadedData.popFixed : popFixed;
+        // Apply showInactive flag if present; otherwise retain current setting
+        if (loadedData.showInactive != null) {
+          showInactive = loadedData.showInactive;
+        }
         // Re-clamp level values after loading
         objects.forEach(o => {
           if (levels[o.id] == null) levels[o.id] = 0;
@@ -364,15 +446,24 @@ document.getElementById('load-levels-input').onchange = (event) => {
         });
          // Ensure discount keys exist for each type after loading
          objects.forEach(o => { if (discountByType[o.type] == null) discountByType[o.type] = 0; });
-
         // Update localStorage (optional, but good for persistence between sessions)
-        localStorage.setItem('object_levels', JSON.stringify({ levels: levels, discounts: discountByType }));
+        localStorage.setItem('object_levels', JSON.stringify({
+          levels: levels,
+          discounts: discountByType,
+          profitPercent: profitPercent,
+          profitFixed: profitFixed,
+          popPercent: popPercent,
+          popFixed: popFixed,
+          showInactive: showInactive
+        }));
         localStorage.setItem('discounts', JSON.stringify(discountByType)); // Keep localStorage 'discounts' for backward compatibility or other uses
-
+        // Update the checkbox UI to reflect the loaded state
+        document.getElementById('show-inactive-checkbox').checked = showInactive;
         renderDiscountFields();
+        renderAdjustmentFields();
         renderCards();
         renderStats();
-        alert('Levels and discounts loaded successfully!');
+        alert('Levels, discounts, adjustments and settings loaded successfully!');
       } else {
         alert('Invalid file format. Please select a file with levels and discounts.');
       }
@@ -417,6 +508,50 @@ function renderDiscountFields() {
   });
 }
 
+// Populate adjustment settings fields for profit and population
+function renderAdjustmentFields() {
+  const container = document.getElementById('adjust-fields');
+  if (!container) return;
+  container.innerHTML = '';
+
+  // Helper to create a labeled numeric input
+  function addField(labelText, valueGetter, valueSetter, options = {}) {
+    const wrapper = document.createElement('div');
+    const label = document.createElement('label');
+    label.textContent = `${labelText}: `;
+    const input = document.createElement('input');
+    input.type = 'number';
+    if (options.min != null) input.min = String(options.min);
+    if (options.max != null) input.max = String(options.max);
+    if (options.step != null) input.step = String(options.step);
+    input.value = String(valueGetter());
+    input.style.width = '70px';
+    input.oninput = () => {
+      let val = parseFloat(input.value);
+      if (isNaN(val)) val = 0;
+      // If a max is defined and value exceeds it, clamp
+      if (options.max != null && val > options.max) val = options.max;
+      if (options.min != null && val < options.min) val = options.min;
+      valueSetter(val);
+      // persist changes
+      saveLevelsAndDiscounts();
+      renderStats();
+    };
+    wrapper.appendChild(label);
+    wrapper.appendChild(input);
+    container.appendChild(wrapper);
+  }
+
+  // Profit percent (percentage multiplier, default 100%)
+  addField('Profit percent (%)', () => profitPercent, (val) => { profitPercent = val; }, { min: 0 });
+  // Profit fixed amount
+  addField('Profit fixed', () => profitFixed, (val) => { profitFixed = val; });
+  // Population percent (percentage multiplier, default 100%)
+  addField('Population percent (%)', () => popPercent, (val) => { popPercent = val; }, { min: 0 });
+  // Population fixed amount
+  addField('Population fixed', () => popFixed, (val) => { popFixed = val; });
+}
+
 // Toggle settings panel
 document.getElementById('settings-btn').onclick = () => {
   const panel = document.getElementById('settings-panel');
@@ -456,12 +591,22 @@ function renderStats() {
   });
   const bar = document.getElementById('stats-bar');
   const totalCards = relevantObjects.length;
-  bar.textContent = `Total Cards: ${totalCards} | Total Profit: ${totalProfit.toLocaleString()} | Total Population: ${totalPop.toLocaleString()}`;
+  // Compute adjusted totals based on percentage multipliers and fixed amounts
+  const profitPercentValue = (totalProfit * (profitPercent / 100));
+  const totalProfitAdjusted = profitFixed + profitPercentValue;
+  const popPercentValue = (totalPop * (popPercent / 100));
+  const totalPopAdjusted = popFixed + popPercentValue;
+  // Compose display string; show original totals with their adjusted counterparts
+  bar.textContent =
+    `Total Cards: ${totalCards} | ` +
+    `Total Profit: ${totalProfitAdjusted.toLocaleString()} | ` +
+    `Total Population: ${totalPopAdjusted.toLocaleString()}`;
 }
 
 // Add event listener for the show/hide inactive checkbox
 document.getElementById('show-inactive-checkbox').onchange = (e) => {
   showInactive = e.target.checked;
+  saveLevelsAndDiscounts();
   renderCards();
 };
 
