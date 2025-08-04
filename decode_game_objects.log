@@ -5,3 +5,46 @@
 2025-08-04 18:15:57,507 - INFO - Decoding .\gameobjects_decoded.json
 2025-08-04 18:16:36,724 - INFO - Decoding gameobjects.json
 2025-08-04 18:16:38,444 - INFO - Decoded data saved to gameobjects_decoded.json
+2025-08-04 19:03:48,896 - INFO - Decoding gameobjects.json
+2025-08-04 19:03:49,729 - INFO - Decoded 'game_objects+' data saved to gameobjects_game_objects_decoded.json
+2025-08-04 19:03:49,731 - INFO - Decoded 'horoscopes+' data saved to gameobjects_horoscopes_decoded.json
+2025-08-04 19:08:39,289 - INFO - Decoding gameobjects.json
+2025-08-04 19:08:41,806 - INFO - Decoded 'game_objects+' data saved to gameobjects_game_objects_decoded.json
+2025-08-04 19:08:41,824 - INFO - Decoded 'quizzes+' data saved to gameobjects_quizzes_decoded.json
+2025-08-04 19:10:36,109 - INFO - Decoding gameobjects.json
+2025-08-04 19:10:39,646 - INFO - Decoded 'game_objects+' data saved to gameobjects_game_objects_decoded.json
+2025-08-04 19:10:39,663 - INFO - Decoded 'quizzes+' data saved to gameobjects_quizzes_decoded.json
+2025-08-04 19:29:14,596 - INFO - Decoding gameobjects.json
+2025-08-04 19:29:15,592 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:29:15,598 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:33:30,932 - INFO - Decoding gameobjects.json
+2025-08-04 19:33:31,815 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:33:31,821 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:36:56,596 - INFO - Decoding gameobjects.json
+2025-08-04 19:36:57,493 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:36:57,497 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:45:23,651 - INFO - Decoding gameobjects.json
+2025-08-04 19:45:24,503 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:45:24,509 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:49:32,618 - INFO - Decoding gameobjects.json
+2025-08-04 19:49:33,466 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:49:33,471 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:52:39,387 - INFO - Decoding gameobjects.json
+2025-08-04 19:52:40,332 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:52:40,343 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:57:31,002 - INFO - Decoding gameobjects.json
+2025-08-04 19:57:31,921 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:57:31,927 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 19:59:27,744 - INFO - Decoding gameobjects.json
+2025-08-04 19:59:28,633 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 19:59:28,638 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 20:04:09,209 - INFO - Decoding gameobjects.json
+2025-08-04 20:04:10,170 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 20:04:10,175 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 20:17:37,311 - INFO - Decoding gameobjects.json
+2025-08-04 20:17:38,804 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 20:17:38,822 - INFO - Decoded 'quizzes+' data saved to gamequizzes_decoded.json
+2025-08-04 20:22:33,482 - INFO - Decoding gameobjects.json
+2025-08-04 20:22:34,432 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
+2025-08-04 20:23:08,926 - INFO - Decoding gameobjects.json
+2025-08-04 20:23:09,832 - INFO - Decoded 'game_objects+' data saved to gameobjects_decoded.json
