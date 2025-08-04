@@ -53,6 +53,7 @@ for obj in gameobjects:
     obj_id = obj.get('id')
     if obj_id in extracted_titles:
         obj['title'] = extracted_titles[obj_id]
+        print(f"Updated title for {obj_id}: {obj['title']}")
     else:
         # Fall back to name if no title is found
         obj['title'] = obj.get('name')
