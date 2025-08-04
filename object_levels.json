@@ -380,7 +380,11 @@
     "obj_ind_082": 15,
     "obj_twn_090": 14,
     "obj_twn_081": 0,
+<<<<<<< HEAD
     "obj_spc_056": 0,
+=======
+    "obj_spc_056": 1,
+>>>>>>> 4247b866fcd48f98610076d87f1878c41fa90386
     "obj_ind_083": 13,
     "obj_ind_102": 0,
     "obj_twn_091": 0,
@@ -474,7 +478,7 @@
     "obj_ind_073": 12,
     "obj_ind_074": 12,
     "obj_ind_075": 12,
-    "obj_spc_048": 0,
+    "obj_spc_048": 1,
     "obj_spc_051": 0,
     "obj_ind_076": 14,
     "obj_twn_083": 0,
@@ -544,29 +548,39 @@
     "obj_inc_107": 0,
     "obj_inc_108": 19,
     "obj_inc_109": 19,
+<<<<<<< HEAD
     "obj_inc_110": 19,
+=======
+    "obj_inc_110": 18,
+>>>>>>> 4247b866fcd48f98610076d87f1878c41fa90386
     "obj_inc_111": 17,
     "obj_inc_112": 16,
     "obj_ind_094": 0,
     "obj_ind_095": 17,
     "obj_ind_096": 16,
+<<<<<<< HEAD
     "obj_twn_094": 17,
     "obj_twn_095": 19,
     "obj_cit_111": 0,
     "obj_inc_122": 0,
     "obj_inc_121": 0,
     "obj_inc_120": 0
+=======
+    "obj_twn_094": 20,
+    "obj_twn_095": 19,
+    "obj_cit_111": 0
+>>>>>>> 4247b866fcd48f98610076d87f1878c41fa90386
   },
   "discounts": {
-    "RESIDENT": 15,
-    "INDUSTRIAL": 30,
-    "CITY": 15,
-    "COMMERCIAL": 30,
-    "SPECIAL": 15,
+    "RESIDENT": 25,
+    "INDUSTRIAL": 25,
+    "CITY": 25,
+    "COMMERCIAL": 25,
+    "SPECIAL": 0,
     "WONDER": 0
   },
-  "profitPercent": 105,
-  "profitFixed": 550000,
+  "profitPercent": 112,
+  "profitFixed": 925000,
   "popPercent": 100,
   "popFixed": 0,
   "showInactive": true
