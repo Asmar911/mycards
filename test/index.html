@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top toolbar -->
+  <div class="toolbar">
+    <!-- Sort control (floats by CSS; keep IDs) -->
+    <div class="sort">
+      <label for="sort-select">Sort by:</label>
+      <select id="sort-select">
+        <option value="none">None</option>
+
+        <!-- Price -->
+        <option value="price-high-low">Price high→low</option>
+        <option value="price-low-high">Price low→high</option>
+
+        <!-- Raw profit delta (ΔPPH only; not ROI) -->
+        <option value="profit-high-low">Profit high→low</option>
+        <option value="profit-low-high">Profit low→high</option>
+
+        <!-- Legacy ROI sorts (kept for convenience) -->
+        <option value="dollar-roi-high-low">$ ROI high→low</option>
+        <option value="dollar-roi-low-high">$ ROI low→high</option>
+        <option value="population-roi-high-low">P ROI high→low</option>
+        <option value="population-roi-low-high">P ROI low→high</option>
+
+        <!-- Level -->
+        <option value="level-low-high">Level low→high</option>
+        <option value="level-high-low">Level high→low</option>
+
+        <!-- NEW: Conditions-aware ROI sorts -->
+        <option value="best-pph">Best PPH (ROI)</option>
+        <option value="best-pop">Best POP (ROI)</option>
+      </select>
+    </div>
+
+    <!-- Save/Load -->
+    <button class="save-btn" id="download-btn">Download levels</button>
+    <button class="save-btn" id="load-btn">Load levels</button>
+    <input type="file" id="load-levels-input" accept=".json" style="display:none;">
+
+    <!-- Settings -->
+    <button class="save-btn" id="settings-btn" title="Settings" style="background:#f1f1f1;color:#168acd;padding:0.4rem 0.6rem;">
+      ⚙️
+    </button>
+  </div>
+
+  <!-- Statistics bar -->
+  <div id="stats-bar" style="margin-bottom:0.5rem;font-weight:bold;color:#168acd;"></div>
+
+  <!-- Settings panel -->
+  <div id="settings-panel" style="display:none;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);margin-bottom:0.5rem;">
+    <h4 style="margin-top:0">Discount Settings</h4>
+    <p style="font-size:0.9rem;color:#555;">Set a discount percentage for each type. Discount is applied to level costs when calculating ROI.</p>
+    <div id="discount-fields" style="display:flex;flex-direction:column;gap:0.5rem;"></div>
+
+    <h4 style="margin-top:1rem;">Adjust Totals</h4>
+    <p style="font-size:0.9rem;color:#555;">Configure percentage multipliers and fixed additions to apply to the aggregated profit and population metrics shown below the cards.</p>
+    <div id="adjust-fields" style="display:flex;flex-direction:column;gap:0.5rem;"></div>
+
+    <h4 style="margin-top:1rem;">Display Options</h4>
+    <div>
+      <input type="checkbox" id="show-inactive-checkbox">
+      <label for="show-inactive-checkbox">Show inactive objects</label>
+    </div>
+  </div>
+
+  <!-- Cards list -->
+  <div class="cards" id="cards"></div>
+
+  <!-- Bottom type filter tabs -->
+  <div class="bottom-bar" id="bottom-tabs"></div>
+
+  <!-- App script -->
+  <script src="script.js"></script>
+</body>
+</html>
