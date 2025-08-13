@@ -63294,6 +63294,23 @@
     ]
   },
   {
+    "id": "obj_spc_060",
+    "name": "Celebration Tower",
+    "type": "SPECIAL",
+    "is_active": true,
+    "title": "Celebration Tower",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 0,
+        "income_per_hour": 36500,
+        "population": 36500,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
     "id": "obj_spc_038",
     "name": "House of All Lovers",
     "type": "SPECIAL",
@@ -90440,7 +90457,7 @@
     "name": "Plov House",
     "type": "COMMERCIAL",
     "is_active": true,
-    "title": "Plov House",
+    "title": "Pilaf House",
     "levels": [
       {
         "level": 1,
@@ -90943,17 +90960,1521 @@
     ]
   },
   {
-    "id": "obj_spc_060",
-    "name": "Celebration Tower",
-    "type": "SPECIAL",
+    "id": "obj_cit_112",
+    "name": "House of a Thousand Patterns",
+    "type": "RESIDENT",
     "is_active": true,
-    "title": "Celebration Tower",
+    "title": "House of a Thousand Patterns",
     "levels": [
       {
         "level": 1,
-        "cost": 0,
-        "income_per_hour": 36500,
-        "population": 36500,
+        "cost": 289021,
+        "income_per_hour": 0,
+        "population": 1423,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 499557,
+        "income_per_hour": 0,
+        "population": 3088,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 756638,
+        "income_per_hour": 0,
+        "population": 5023,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 1123173,
+        "income_per_hour": 0,
+        "population": 7254,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 1661695,
+        "income_per_hour": 0,
+        "population": 9808,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 2457029,
+        "income_per_hour": 0,
+        "population": 12711,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 3632686,
+        "income_per_hour": 0,
+        "population": 15990,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 5370794,
+        "income_per_hour": 0,
+        "population": 19670,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 7940500,
+        "income_per_hour": 0,
+        "population": 23779,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 11739701,
+        "income_per_hour": 0,
+        "population": 28342,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 17356661,
+        "income_per_hour": 0,
+        "population": 33387,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 25661102,
+        "income_per_hour": 0,
+        "population": 38939,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 37938875,
+        "income_per_hour": 0,
+        "population": 45026,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 56091053,
+        "income_per_hour": 0,
+        "population": 51673,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 82928294,
+        "income_per_hour": 0,
+        "population": 58908,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 122606044,
+        "income_per_hour": 0,
+        "population": 66755,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 181267949,
+        "income_per_hour": 0,
+        "population": 75243,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 267997142,
+        "income_per_hour": 0,
+        "population": 84397,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 396222656,
+        "income_per_hour": 0,
+        "population": 94245,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 585798759,
+        "income_per_hour": 0,
+        "population": 104811,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_cit_113",
+    "name": "House of the Azure Dome",
+    "type": "RESIDENT",
+    "is_active": true,
+    "title": "House of the Azure Dome",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 419076,
+        "income_per_hour": 0,
+        "population": 1636,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 728086,
+        "income_per_hour": 0,
+        "population": 3528,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 1109115,
+        "income_per_hour": 0,
+        "population": 5703,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 1656198,
+        "income_per_hour": 0,
+        "population": 8188,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 2464992,
+        "income_per_hour": 0,
+        "population": 11011,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 3666731,
+        "income_per_hour": 0,
+        "population": 14200,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 5453836,
+        "income_per_hour": 0,
+        "population": 17782,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 8111821,
+        "income_per_hour": 0,
+        "population": 21786,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 12065172,
+        "income_per_hour": 0,
+        "population": 26237,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 17945207,
+        "income_per_hour": 0,
+        "population": 31165,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 26690911,
+        "income_per_hour": 0,
+        "population": 36596,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 39698884,
+        "income_per_hour": 0,
+        "population": 42559,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 59046371,
+        "income_per_hour": 0,
+        "population": 49081,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 87822970,
+        "income_per_hour": 0,
+        "population": 56189,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 130624015,
+        "income_per_hour": 0,
+        "population": 63911,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 194284403,
+        "income_per_hour": 0,
+        "population": 72275,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 288970060,
+        "income_per_hour": 0,
+        "population": 81308,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 429801332,
+        "income_per_hour": 0,
+        "population": 91039,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 639267561,
+        "income_per_hour": 0,
+        "population": 101493,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 950818397,
+        "income_per_hour": 0,
+        "population": 112700,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_cit_114",
+    "name": "House of the Hot Sand",
+    "type": "RESIDENT",
+    "is_active": true,
+    "title": "House of Scorching Sand",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 544799,
+        "income_per_hour": 0,
+        "population": 1964,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 942470,
+        "income_per_hour": 0,
+        "population": 4199,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 1428847,
+        "income_per_hour": 0,
+        "population": 6733,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 2123117,
+        "income_per_hour": 0,
+        "population": 9597,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 3144209,
+        "income_per_hour": 0,
+        "population": 12819,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 4653765,
+        "income_per_hour": 0,
+        "population": 16429,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 6887416,
+        "income_per_hour": 0,
+        "population": 20456,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 10192980,
+        "income_per_hour": 0,
+        "population": 24930,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 15084985,
+        "income_per_hour": 0,
+        "population": 29879,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 22324840,
+        "income_per_hour": 0,
+        "population": 35334,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 33039372,
+        "income_per_hour": 0,
+        "population": 41323,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 48896213,
+        "income_per_hour": 0,
+        "population": 47876,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 72363349,
+        "income_per_hour": 0,
+        "population": 55022,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 107093250,
+        "income_per_hour": 0,
+        "population": 62790,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 158491339,
+        "income_per_hour": 0,
+        "population": 71210,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 234557310,
+        "income_per_hour": 0,
+        "population": 80311,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 347130208,
+        "income_per_hour": 0,
+        "population": 90123,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 513731086,
+        "income_per_hour": 0,
+        "population": 100674,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 760290007,
+        "income_per_hour": 0,
+        "population": 111995,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 1125181853,
+        "income_per_hour": 0,
+        "population": 124114,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_cit_115",
+    "name": "House of Persian Tea",
+    "type": "RESIDENT",
+    "is_active": true,
+    "title": "House of Persian Tea",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 708239,
+        "income_per_hour": 0,
+        "population": 2358,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 1219983,
+        "income_per_hour": 0,
+        "population": 5000,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 1840759,
+        "income_per_hour": 0,
+        "population": 7960,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 2721688,
+        "income_per_hour": 0,
+        "population": 11268,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 4010607,
+        "income_per_hour": 0,
+        "population": 14955,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 5906537,
+        "income_per_hour": 0,
+        "population": 19051,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 8697881,
+        "income_per_hour": 0,
+        "population": 23589,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 12808166,
+        "income_per_hour": 0,
+        "population": 28598,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 18860759,
+        "income_per_hour": 0,
+        "population": 34111,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 27773534,
+        "income_per_hour": 0,
+        "population": 40158,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 40898099,
+        "income_per_hour": 0,
+        "population": 46771,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 60224761,
+        "income_per_hour": 0,
+        "population": 53979,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 88684364,
+        "income_per_hour": 0,
+        "population": 61815,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 130592735,
+        "income_per_hour": 0,
+        "population": 70309,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 192305180,
+        "income_per_hour": 0,
+        "population": 79493,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 283180241,
+        "income_per_hour": 0,
+        "population": 89396,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 416998903,
+        "income_per_hour": 0,
+        "population": 100052,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 614054440,
+        "income_per_hour": 0,
+        "population": 111490,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 904229852,
+        "income_per_hour": 0,
+        "population": 123742,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 1331529539,
+        "income_per_hour": 0,
+        "population": 136839,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_inc_124",
+    "name": "Textile Atelier",
+    "type": "COMMERCIAL",
+    "is_active": true,
+    "title": "Textile Atelier",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 75791,
+        "income_per_hour": 3417,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 128783,
+        "income_per_hour": 6920,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 191367,
+        "income_per_hour": 10536,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 278509,
+        "income_per_hour": 14285,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 403907,
+        "income_per_hour": 18190,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 585410,
+        "income_per_hour": 22272,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 848386,
+        "income_per_hour": 26553,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 1229471,
+        "income_per_hour": 31055,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 1781730,
+        "income_per_hour": 35802,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 2582054,
+        "income_per_hour": 40813,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 3741868,
+        "income_per_hour": 46112,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 5422652,
+        "income_per_hour": 51720,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 7858415,
+        "income_per_hour": 57660,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 11388283,
+        "income_per_hour": 63953,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 16503707,
+        "income_per_hour": 70621,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 23916894,
+        "income_per_hour": 77686,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 34659957,
+        "income_per_hour": 85172,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 50228622,
+        "income_per_hour": 93099,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 72790469,
+        "income_per_hour": 101488,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 105486717,
+        "income_per_hour": 110363,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_inc_125",
+    "name": "Calligrapher’s Workshop",
+    "type": "COMMERCIAL",
+    "is_active": true,
+    "title": "Calligrapher’s Workshop",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 109139,
+        "income_per_hour": 4182,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 184816,
+        "income_per_hour": 8456,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 273583,
+        "income_per_hour": 12848,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 396595,
+        "income_per_hour": 17380,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 572870,
+        "income_per_hour": 22076,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 826986,
+        "income_per_hour": 26958,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 1193696,
+        "income_per_hour": 32050,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 1722986,
+        "income_per_hour": 37374,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 2486956,
+        "income_per_hour": 42954,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 3589668,
+        "income_per_hour": 48813,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 5181318,
+        "income_per_hour": 54974,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 7478705,
+        "income_per_hour": 61459,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 10794747,
+        "income_per_hour": 68294,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 15581116,
+        "income_per_hour": 75499,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 22489749,
+        "income_per_hour": 83098,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 32461657,
+        "income_per_hour": 91115,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 46855089,
+        "income_per_hour": 99573,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 67630539,
+        "income_per_hour": 108494,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 97617778,
+        "income_per_hour": 117902,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 140901299,
+        "income_per_hour": 127820,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_ind_105",
+    "name": "Oriental Oils Factory",
+    "type": "INDUSTRIAL",
+    "is_active": true,
+    "title": "Oriental Oils Factory",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 75067,
+        "income_per_hour": 2871,
+        "population": 383,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 129529,
+        "income_per_hour": 5822,
+        "population": 913,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 195813,
+        "income_per_hour": 8874,
+        "population": 1607,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 290095,
+        "income_per_hour": 12045,
+        "population": 2479,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 428330,
+        "income_per_hour": 15354,
+        "population": 3545,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 632075,
+        "income_per_hour": 18820,
+        "population": 4820,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 932649,
+        "income_per_hour": 22462,
+        "population": 6318,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 1376131,
+        "income_per_hour": 26299,
+        "population": 8055,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 2030490,
+        "income_per_hour": 30350,
+        "population": 10045,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 2995997,
+        "income_per_hour": 34635,
+        "population": 12305,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 4420608,
+        "income_per_hour": 39171,
+        "population": 14848,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 6522627,
+        "income_per_hour": 43978,
+        "population": 17689,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 9624165,
+        "income_per_hour": 49075,
+        "population": 20844,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 14200500,
+        "income_per_hour": 54481,
+        "population": 24328,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 20952902,
+        "income_per_hour": 60214,
+        "population": 28156,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 30916102,
+        "income_per_hour": 66295,
+        "population": 32343,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 45616848,
+        "income_per_hour": 72741,
+        "population": 36905,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 67307867,
+        "income_per_hour": 79572,
+        "population": 41855,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 99313064,
+        "income_per_hour": 86807,
+        "population": 47210,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 146536878,
+        "income_per_hour": 94464,
+        "population": 52984,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_twn_103",
+    "name": "Tiered Garden",
+    "type": "CITY",
+    "is_active": true,
+    "title": "Tiered Garden",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 615179,
+        "income_per_hour": 18822,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 1044411,
+        "income_per_hour": 37800,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 1550479,
+        "income_per_hour": 56973,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 2254294,
+        "income_per_hour": 76376,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 3266023,
+        "income_per_hour": 96048,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 4728936,
+        "income_per_hour": 116023,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 6846395,
+        "income_per_hour": 136340,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 9911799,
+        "income_per_hour": 157034,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 14349665,
+        "income_per_hour": 178144,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 20774508,
+        "income_per_hour": 199705,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 30075976,
+        "income_per_hour": 221756,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 43542032,
+        "income_per_hour": 244331,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 63037305,
+        "income_per_hour": 267469,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 91261289,
+        "income_per_hour": 291206,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 132122128,
+        "income_per_hour": 315580,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 191277777,
+        "income_per_hour": 340626,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 276919459,
+        "income_per_hour": 366383,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 400905886,
+        "income_per_hour": 392885,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 580405329,
+        "income_per_hour": 420171,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 840272885,
+        "income_per_hour": 448278,
+        "population": 0,
+        "keys_cost": 0,
+        "stars_cost": 0
+      }
+    ]
+  },
+  {
+    "id": "obj_twn_104",
+    "name": "City Archive",
+    "type": "CITY",
+    "is_active": true,
+    "title": "City Archive",
+    "levels": [
+      {
+        "level": 1,
+        "cost": 1448633,
+        "income_per_hour": 0,
+        "population": 2083,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 2,
+        "cost": 2448934,
+        "income_per_hour": 0,
+        "population": 4444,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 3,
+        "cost": 3618264,
+        "income_per_hour": 0,
+        "population": 7115,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 1910203,
+        "income_per_hour": 0,
+        "population": 9077,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 5,
+        "cost": 6237755,
+        "income_per_hour": 0,
+        "population": 10498,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 6,
+        "cost": 10545012,
+        "income_per_hour": 0,
+        "population": 14286,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 7,
+        "cost": 15580097,
+        "income_per_hour": 0,
+        "population": 18509,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 8,
+        "cost": 22540812,
+        "income_per_hour": 0,
+        "population": 23198,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 9,
+        "cost": 32494722,
+        "income_per_hour": 0,
+        "population": 28386,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 10,
+        "cost": 46815194,
+        "income_per_hour": 0,
+        "population": 34103,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 11,
+        "cost": 67439465,
+        "income_per_hour": 0,
+        "population": 40382,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 12,
+        "cost": 97147875,
+        "income_per_hour": 0,
+        "population": 47254,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 13,
+        "cost": 139942971,
+        "income_per_hour": 0,
+        "population": 54749,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 14,
+        "cost": 201589833,
+        "income_per_hour": 0,
+        "population": 62900,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 15,
+        "cost": 290392984,
+        "income_per_hour": 0,
+        "population": 71738,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 16,
+        "cost": 418315164,
+        "income_per_hour": 0,
+        "population": 81294,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 17,
+        "cost": 602588854,
+        "income_per_hour": 0,
+        "population": 91600,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 18,
+        "cost": 868037686,
+        "income_per_hour": 0,
+        "population": 102688,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 19,
+        "cost": 1250420446,
+        "income_per_hour": 0,
+        "population": 114589,
+        "keys_cost": 0,
+        "stars_cost": 0
+      },
+      {
+        "level": 20,
+        "cost": 1801248169,
+        "income_per_hour": 0,
+        "population": 127334,
         "keys_cost": 0,
         "stars_cost": 0
       }
