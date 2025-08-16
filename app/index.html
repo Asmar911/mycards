@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="robots" content="noindex, nofollow">
+    <title>CITY Holder</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QNF78S3T7L"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      const userId =
+        window?.Telegram?.WebApp?.initDataUnsafe.user?.id ?? "unknown_user";
+      const sessionId = Math.random().toString(36).substr(2, 9);
+
+      localStorage.setItem("userId", userId);
+      localStorage.setItem("sessionId", sessionId);
+
+      function gtag() {
+        if (window.location.hostname === "localhost") return;
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-QNF78S3T7L", {
+        player_id: userId,
+        session_id: sessionId,
+      });
+
+      Telegram.WebApp.expand();
+    </script>
+    <script type="module" crossorigin src="/assets/index-Bq30lsqg.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-DzHmcp6v.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DWWCEyzX.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
