@@ -1,64 +1,127 @@
 import json
 import re
-from bs4 import BeautifulSoup
+from pathlib import Path
 
-# File paths
-html_path = 'test.html'
-obj_levels_path = 'object_levels.json'
-gameobjects_path = 'gameobjects_final.json'
+from bs4 import BeautifulSoup, SoupStrainer
 
-# Load existing object_levels.json
-with open(obj_levels_path, 'r', encoding='utf-8') as f:
-    obj_data = json.load(f)
+# === Config (adjust paths if needed) ===
+HTML_PATH = Path("test.html")
+OBJ_LEVELS_PATH = Path("object_levels.json")
+GAMEOBJECTS_PATH = Path("gameobjects_final.json")
 
-levels = obj_data.get('levels', {})  # keep only levels
-# Do not modify obj_data['titles']; leave it as-is
+FULLY_UP_STR = "fullyUpgraded"
+FULLY_MARKERS = ("fully upgraded", "object constructed")
 
-# Parse the HTML file
-with open(html_path, 'r', encoding='utf-8') as f:
-    soup = BeautifulSoup(f, 'html.parser')
+OBJ_ID_RE = re.compile(r"(obj_[a-z]+_\d+)", re.IGNORECASE)
 
-extracted_titles = {}
-for anchor in soup.find_all('a', href=True):
-    href = anchor['href']
-    match = re.search(r'obj_[A-Za-z]+_\d+', href)
-    if not match:
-        continue
+def read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8", errors="ignore")
 
-    obj_id = match.group()
+def has_fully_marker(anchor) -> bool:
+    classes = anchor.get("class") or []
+    if any("_isCompleted_" in c for c in classes):
+        return True
+    text = anchor.get_text(separator=" ", strip=True).lower()
+    return any(m in text for m in FULLY_MARKERS)
 
-    # Update the level
-    level_div = anchor.find('div', class_='_count_1tsjb_87')
-    if level_div:
-        level_text = level_div.get_text(strip=True)
-        digits = re.sub(r'\D', '', level_text)
-        if digits:
-            levels[obj_id] = int(digits)
+def extract_obj_id(href: str) -> str | None:
+    if not href:
+        return None
+    m = OBJ_ID_RE.search(href)
+    return m.group(1) if m else None
 
-    # Collect title for use in gameobjects_final.json
-    title_div = anchor.find('div', class_='_title_xhvbx_1')
-    if title_div:
-        extracted_titles[obj_id] = title_div.get_text(strip=True)
+def extract_level(anchor) -> int | None:
+    node = anchor.find(True, class_=re.compile(r"_count_"))
+    if not node:
+        return None
+    txt = node.get_text(strip=True)
+    digits = re.sub(r"\D", "", txt)
+    if not digits:
+        return None
+    try:
+        return int(digits)
+    except ValueError:
+        return None
 
-# Write updated levels back to object_levels.json (titles remain unchanged)
-obj_data['levels'] = levels
-with open(obj_levels_path, 'w', encoding='utf-8') as f:
-    json.dump(obj_data, f, indent=2, ensure_ascii=False)
+def extract_title(anchor) -> str | None:
+    title_div = anchor.find(True, class_=re.compile(r"_title_"))
+    return title_div.get_text(strip=True) if title_div else None
 
-# Update the title field in gameobjects_final.json
-with open(gameobjects_path, 'r', encoding='utf-8') as f:
-    gameobjects = json.load(f)
+def parse_html_for_levels_and_titles(html: str):
+    levels_map = {}
+    titles_map = {}
 
-for obj in gameobjects:
-    obj_id = obj.get('id')
-    if obj_id in extracted_titles:
-        obj['title'] = extracted_titles[obj_id]
-        # print(f"Updated title for {obj_id}: {obj['title']}")
+    soup = BeautifulSoup(html, "html.parser", parse_only=SoupStrainer("a"))
+    for a in soup:
+        if not hasattr(a, "get"):
+            continue
+
+        obj_id = extract_obj_id(a.get("href", ""))
+        if not obj_id:
+            continue
+
+        title = extract_title(a)
+        if title:
+            titles_map[obj_id] = title
+
+        if has_fully_marker(a):
+            levels_map[obj_id] = FULLY_UP_STR
+            continue
+
+        lvl = extract_level(a)
+        if lvl is not None:
+            levels_map[obj_id] = lvl
+
+    return levels_map, titles_map
+
+def load_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: Path, data: dict):
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def main():
+    if not HTML_PATH.exists():
+        raise FileNotFoundError(f"{HTML_PATH} not found")
+
+    html = read_text(HTML_PATH)
+    new_levels, new_titles = parse_html_for_levels_and_titles(html)
+
+    # --- Update object_levels.json (merge) ---
+    obj_data = load_json(OBJ_LEVELS_PATH)
+    levels = obj_data.get("levels", {})
+    for k, v in new_levels.items():
+        levels[k] = v
+
+    # 🔹 Sort levels by object ID
+    sorted_levels = {k: levels[k] for k in sorted(levels.keys())}
+    obj_data["levels"] = sorted_levels
+
+    save_json(OBJ_LEVELS_PATH, obj_data)
+    print(f"Updated {OBJ_LEVELS_PATH} with {len(new_levels)} level entries (sorted by ID).")
+
+    # --- Update titles in gameobjects_final.json (if present) ---
+    if GAMEOBJECTS_PATH.exists():
+        gameobjects = load_json(GAMEOBJECTS_PATH)
+        changed = 0
+        if isinstance(gameobjects, list):
+            for obj in gameobjects:
+                oid = obj.get("id")
+                if not oid:
+                    continue
+                if oid in new_titles:
+                    obj["title"] = new_titles[oid]
+                    changed += 1
+                elif "name" in obj and "title" not in obj:
+                    obj["title"] = obj["name"]
+        save_json(GAMEOBJECTS_PATH, gameobjects)
+        print(f"Updated titles for {changed} objects in {GAMEOBJECTS_PATH}.")
     else:
-        # Fall back to name if no title is found
-        obj['title'] = obj.get('name')
+        print(f"{GAMEOBJECTS_PATH} not found; skipped title sync.")
 
-with open(gameobjects_path, 'w', encoding='utf-8') as f:
-    json.dump(gameobjects, f, indent=2, ensure_ascii=False)
-
-print("Levels saved to object_levels.json; titles saved to gameobjects_final.json.")
+if __name__ == "__main__":
+    main()

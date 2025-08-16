@@ -6,9 +6,13 @@ async function loadJSON(path) {
 }
 
 let objects = [];
+// Internally we keep levels as NUMBERS for calculations/UI
 let levels = {};
+// Derived in runtime from numeric level vs max
+let fullyUpgraded = {};
 let currentType = 'ALL';
 let sortOption = 'none';
+
 // Mapping of type to discount percentage (0-100)
 let discountByType = {};
 
@@ -19,67 +23,83 @@ let profitPercent = 100;
 let profitFixed = 0;
 let popPercent = 100;
 let popFixed = 0;
+
 // Constant: value of one key in cost units
 const KEY_VALUE = 1250000;
 
 // Keep track of whether to show inactive objects
 let showInactive = false;
 
+/** Utility: return max level index for an object (== number of level entries) */
+function maxIndexFor(obj) {
+  return Array.isArray(obj.levels) ? obj.levels.length : 0;
+}
+
+/** Utility: resolve numeric level from a possibly "fullyUpgraded" value */
+function resolveNumericLevel(value, maxIndex) {
+  if (value === 'fullyUpgraded') return maxIndex;
+  let n = parseInt(value, 10);
+  if (Number.isNaN(n) || n < 0) n = 0;
+  if (n > maxIndex) n = maxIndex;
+  return n;
+}
+
+/** Utility: when saving, convert numeric to "fullyUpgraded" if at max */
+function serializeLevel(numericLevel, maxIndex) {
+  return numericLevel >= maxIndex ? 'fullyUpgraded' : numericLevel;
+}
+
 // Initial data load
 (async function init() {
   let dataLoaded = false;
-    // Try to load gameobjects
-    try {
+
+  // 1) Load game objects
+  try {
     const data = await loadJSON('gameobjects_final.json');
-    /*
-     * Do not filter objects by their active status during initial load.  The
-     * `showInactive` toggle should determine which cards are visible in
-     * `renderCards()`.  Filtering here permanently discards inactive
-     * objects and prevents them from ever being shown when the user
-     * enables the "show inactive" option.
-     */
     objects = Array.isArray(data) ? data : [];
     dataLoaded = true;
   } catch (err) {
     console.error('Failed to load gameobjects_final.json:', err);
     objects = [];
   }
-  // Try to load levels and discounts from object_levels.json
+
+  // 2) Load levels & settings from object_levels.json (levels may contain numbers OR "fullyUpgraded")
+  let rawLevels = {};
   try {
     const loadedData = await loadJSON('object_levels.json');
     if (loadedData && typeof loadedData === 'object') {
-      levels = loadedData.levels || {};
+      rawLevels = loadedData.levels || {};
       discountByType = loadedData.discounts || {};
-      // Load adjustment settings if present; default values otherwise
       profitPercent = loadedData.profitPercent != null ? loadedData.profitPercent : profitPercent;
       profitFixed = loadedData.profitFixed != null ? loadedData.profitFixed : profitFixed;
       popPercent = loadedData.popPercent != null ? loadedData.popPercent : popPercent;
       popFixed = loadedData.popFixed != null ? loadedData.popFixed : popFixed;
-      showInactive = loadedData.showInactive != null ? loadedData.showInactive : showInactive;          
-    } else {
-      levels = {};
-      discountByType = {};
-      // adjustments remain at default values
+      showInactive = loadedData.showInactive != null ? loadedData.showInactive : showInactive;
     }
-  } catch(err) {
-      console.warn('Failed to load object_levels.json:', err);
-      levels = {};
-      discountByType = {};
+  } catch (err) {
+    console.warn('Failed to load object_levels.json:', err);
   }
 
-  // ensure all objects have an entry and clamp levels
-  objects.forEach(o => {
-    if (levels[o.id] == null) levels[o.id] = 0;
-    // Clamp loaded level values within allowed range
-    const maxIndex = o.levels.length;
-    if (levels[o.id] > maxIndex) levels[o.id] = maxIndex;
-    if (levels[o.id] < 0) levels[o.id] = 0;
+  // 3) Normalize levels -> numeric + derive fullyUpgraded
+  levels = {};
+  fullyUpgraded = {};
 
-    // Ensure discount keys exist for each type
-    if (discountByType[o.type] == null) discountByType[o.type] = 0;
+  // Ensure discount keys exist per type
+  const allTypes = new Set(objects.map(o => o.type));
+  allTypes.forEach(t => {
+    if (discountByType[t] == null) discountByType[t] = 0;
   });
 
-  // Render UI elements regardless of data loaded
+  // Build numeric levels map from rawLevels (with support for "fullyUpgraded")
+  objects.forEach(o => {
+    const maxIdx = maxIndexFor(o);
+    const raw = rawLevels[o.id];
+    const num = resolveNumericLevel(raw == null ? 0 : raw, maxIdx);
+    levels[o.id] = num;
+    fullyUpgraded[o.id] = num >= maxIdx;
+  });
+
+  // 4) Render UI
   renderDiscountFields();
   renderAdjustmentFields();
   renderBottomTabs();
@@ -87,7 +107,6 @@ let showInactive = false;
   renderStats();
 
   if (!dataLoaded) {
-    // show message when data couldn't load
     const cardsDiv = document.getElementById('cards');
     cardsDiv.innerHTML = '<p style="padding:1rem;color:#666;">Failed to load game objects. Please ensure the JSON files are served over HTTP.</p>';
   }
@@ -105,7 +124,7 @@ function renderBottomTabs() {
     btn.onclick = () => {
       currentType = typeValue;
       renderCards();
-      renderBottomTabs(); // re-render tabs to update active state
+      renderBottomTabs(); // update active state
     };
     bar.appendChild(btn);
   };
@@ -119,35 +138,33 @@ function sortObjects(list) {
   sorted.sort((a, b) => {
     const lvlA = levels[a.id] ?? 0;
     const lvlB = levels[b.id] ?? 0;
-    // Compute base cost for each object and level, converting keys to cost and applying discounts
+
     function computeAdjustedCost(obj, lvl) {
-      // Cost for the next level (upgrade from current lvl to lvl+1)
       const nd = lvl < obj.levels.length ? (obj.levels[lvl] || {}) : {};
       let baseCost = nd.cost ?? 0;
-      // Determine whether the next level requires keys or stars
       const hasKeysOrStars = (nd.keys_cost ?? 0) > 0 || (nd.stars_cost ?? 0) > 0;
-      // If no monetary cost but there are keys required, convert keys to monetary cost
       if ((!baseCost || baseCost === 0) && (nd.keys_cost ?? 0) > 0) {
         baseCost = (nd.keys_cost || 0) * KEY_VALUE;
       }
       const discount = discountByType[obj.type] ?? 0;
-      // Apply discount only when base cost exists and the level is purely cost based (no keys or stars requirement)
       if (baseCost > 0 && !hasKeysOrStars) {
         return baseCost * (1 - discount / 100);
       }
       return baseCost;
     }
+
     function computeProfit(obj, lvl) {
-      // incremental profit for next level (next - current)
       const curr = lvl > 0 ? (obj.levels[lvl - 1] || {}) : {};
       const next = lvl < obj.levels.length ? (obj.levels[lvl] || {}) : {};
       return (next.income_per_hour ?? 0) - (curr.income_per_hour ?? 0);
     }
+
     function computePop(obj, lvl) {
       const curr = lvl > 0 ? (obj.levels[lvl - 1] || {}) : {};
       const next = lvl < obj.levels.length ? (obj.levels[lvl] || {}) : {};
       return (next.population ?? 0) - (curr.population ?? 0);
     }
+
     const costA = computeAdjustedCost(a, lvlA);
     const costB = computeAdjustedCost(b, lvlB);
     const profitA = computeProfit(a, lvlA);
@@ -185,51 +202,48 @@ document.getElementById('sort-select').onchange = (e) => {
 function renderCards() {
   const container = document.getElementById('cards');
   container.innerHTML = '';
+
   // Filter by type and active status
   let filtered = currentType === 'ALL' ? objects : objects.filter(o => o.type === currentType);
   filtered = showInactive ? filtered : filtered.filter(o => o.is_active);
+
   // Sort according to user preference
   filtered = sortObjects(filtered);
-  // Separate cards into groups: active upgrades, zero-level, and fully upgraded.
-  // Cards with current level equal to 0 or at max level should be placed at the bottom
-  // so that mid‑progress cards are shown first.
+
+  // Separate groups for ordering: mid-progress, zero-level, maxed
   const midProgress = [];
   const zeroLevel = [];
   const maxed = [];
+
   filtered.forEach(obj => {
-    // current level for this object
     const lvl = levels[obj.id] ?? 0;
-    const maxIndex = obj.levels.length;
+    const maxIdx = maxIndexFor(obj);
     if (lvl === 0) {
-      // newly unlocked or unbuilt objects go below mid‑progress cards
       zeroLevel.push(obj);
-    } else if (lvl >= maxIndex) {
-      // fully upgraded objects go to the bottom
+    } else if (lvl >= maxIdx) {
       maxed.push(obj);
     } else {
-      // objects in progress (between 1 and max-1) go at the top
       midProgress.push(obj);
     }
   });
-  // Order: mid‑progress first, then zero‑level, then maxed
+
   const ordered = [...midProgress, ...zeroLevel, ...maxed];
+
   ordered.forEach(obj => {
     const card = document.createElement('div');
     card.className = 'card';
-    // current level index (0..maxIndex)
+
     let lvl = levels[obj.id] ?? 0;
-    const maxIndex = obj.levels.length;
-    if (lvl > maxIndex) lvl = maxIndex;
-    // current and previous data using one-based indexing
+    const maxIdx = maxIndexFor(obj);
+    if (lvl > maxIdx) lvl = maxIdx;
+
+    fullyUpgraded[obj.id] = lvl >= maxIdx;
+
     const currData = lvl > 0 ? (obj.levels[lvl - 1] || {}) : {};
-    const prevData = lvl > 1 ? (obj.levels[lvl - 2] || {}) : {};
-    // next level data used for upgrade cost and growth (if available)
-    const nextData = lvl < maxIndex ? (obj.levels[lvl] || {}) : {};
-    // base cost for next level and discount; apply discounts only to pure cost levels
+    const nextData = lvl < maxIdx ? (obj.levels[lvl] || {}) : {};
+
     let baseCost = nextData.cost ?? 0;
-    // Determine whether the next level requires keys or stars
     const hasKeysOrStars = (nextData.keys_cost ?? 0) > 0 || (nextData.stars_cost ?? 0) > 0;
-    // If no monetary cost but keys are required, convert keys to monetary cost for display/ROI purposes
     if ((!baseCost || baseCost === 0) && (nextData.keys_cost ?? 0) > 0) {
       baseCost = (nextData.keys_cost || 0) * KEY_VALUE;
     }
@@ -242,147 +256,114 @@ function renderCards() {
     } else {
       adjustedCost = baseCost;
     }
-    // incremental profit and population for next level (growth)
+
     const income = (nextData.income_per_hour ?? 0) - (currData.income_per_hour ?? 0);
     const pop = (nextData.population ?? 0) - (currData.population ?? 0);
     const dollarROI = adjustedCost > 0 ? ((income * 100) / adjustedCost).toFixed(5) : '∞';
     const popROI = adjustedCost > 0 ? ((pop * 100) / adjustedCost).toFixed(5) : '∞';
-    // cost display with discount coloring only when discount is applied
+
     let costDisplay;
     if (discountApplied) {
       costDisplay = `<span style="text-decoration: line-through; color:#999;">${baseCost.toLocaleString()}</span> → <span style="color:#d17c00; font-weight:bold;">${adjustedCost.toLocaleString()}</span>`;
     } else {
-      // If there is no cost but keys/stars are required, baseCost may be 0; display '-' when there is nothing to show
       costDisplay = adjustedCost ? adjustedCost.toLocaleString() : (baseCost ? baseCost.toLocaleString() : '-') ;
     }
-    // marks for keys and stars based on next level requirements
+
     let marks = '';
-    if ((nextData.keys_cost ?? 0) > 0) {
-      marks += '<span title="Requires Keys">🔑</span>';
-    }
-    if ((nextData.stars_cost ?? 0) > 0) {
-      marks += '<span title="Requires Stars">⭐</span>';
-    }
-    // Apply special styling if at max level
-    if (lvl >= maxIndex) {
-      card.classList.add('max-level');
-    }
-    if (lvl == 0) {
-      card.classList.add('zero-level');
-    }
-    // Header row: name, ID, level controls
+    if ((nextData.keys_cost ?? 0) > 0) marks += '<span title="Requires Keys">🔑</span>';
+    if ((nextData.stars_cost ?? 0) > 0) marks += '<span title="Requires Stars">⭐</span>';
+
+    if (lvl >= maxIdx) card.classList.add('max-level');
+    if (lvl === 0) card.classList.add('zero-level');
+
     const header = document.createElement('div');
     header.className = 'card-row card-header';
     const info = document.createElement('div');
     info.className = 'card-info';
-    // Use obj.title if it exists, otherwise fall back to obj.name, then obj.id
-    info.innerHTML = `<h3>${obj.title || obj.name || obj.id}</h3><small>Level: ${lvl} | Max: ${maxIndex} | ${obj.id}</small>`;
 
-    // Level controls
+    const badge = fullyUpgraded[obj.id]
+      ? `<span class="badge-fully-upgraded" title="This object is fully upgraded" style="margin-left:8px; padding:2px 6px; border-radius:8px; background:#16a34a; color:#fff; font-size:12px;">Fully upgraded</span>`
+      : '';
+
+    info.innerHTML = `<h3>${obj.title || obj.name || obj.id}${badge}</h3><small>Level: ${lvl} | Max: ${maxIdx} | ${obj.id}</small>`;
+
     const controls = document.createElement('div');
     controls.className = 'level-controls';
     const dec = document.createElement('button');
     dec.textContent = '-';
     dec.onclick = () => updateLevel(obj.id, Math.max(0, lvl - 1));
+
     const lvlInput = document.createElement('input');
     lvlInput.type = 'number';
     lvlInput.min = '0';
-    lvlInput.max = String(maxIndex);
+    lvlInput.max = String(maxIdx);
     lvlInput.value = String(lvl);
     lvlInput.style.width = '3rem';
     lvlInput.onchange = () => {
-      let val = parseInt(lvlInput.value);
+      let val = parseInt(lvlInput.value, 10);
       if (isNaN(val) || val < 0) val = 0;
-      if (val > maxIndex) val = maxIndex;
+      if (val > maxIdx) val = maxIdx;
       updateLevel(obj.id, val);
     };
+
     const inc = document.createElement('button');
     inc.textContent = '+';
-    inc.onclick = () => updateLevel(obj.id, Math.min(maxIndex, lvl + 1));
+    inc.onclick = () => updateLevel(obj.id, Math.min(maxIdx, lvl + 1));
+
     controls.appendChild(dec);
     controls.appendChild(lvlInput);
     controls.appendChild(inc);
+
     header.appendChild(info);
     header.appendChild(controls);
-    // Stats row: cost, income, population
+
     const statsRow = document.createElement('div');
     statsRow.className = 'card-row card-stats';
     statsRow.innerHTML = `<span>Cost: ${costDisplay}${marks}</span><span>Income: ${income.toLocaleString()}</span><span>Population: ${pop.toLocaleString()}</span>`;
-    // ROI row
+
     const roiRow = document.createElement('div');
     roiRow.className = 'card-row card-roi';
     roiRow.innerHTML = `<span>$ ROI: ${dollarROI}</span><span>P ROI: ${popROI}</span>`;
-    // assemble card
+
     card.appendChild(header);
     card.appendChild(statsRow);
     card.appendChild(roiRow);
     container.appendChild(card);
   });
-  // update stats whenever cards are rendered
+
   renderStats();
 }
 
 // Update level and persist locally
 function updateLevel(id, newLevel) {
-  // Clamp newLevel within valid range based on the object's number of upgrade levels
   const obj = objects.find(o => o.id === id);
   if (obj) {
-    const maxIndex = obj.levels.length;
+    const maxIdx = maxIndexFor(obj);
     if (newLevel < 0) newLevel = 0;
-    if (newLevel > maxIndex) newLevel = maxIndex;
+    if (newLevel > maxIdx) newLevel = maxIdx;
+    levels[id] = newLevel;
+    fullyUpgraded[id] = newLevel >= maxIdx;
   }
-  levels[id] = newLevel;
-  // Save both levels and discounts to object_levels.json
   saveLevelsAndDiscounts();
   renderCards();
   renderStats();
 }
 
-// Save current levels and discounts to object_levels.json
+/**
+ * SAVE current state.
+ * IMPORTANT: When exporting "levels", replace any numeric max with the string "fullyUpgraded".
+ */
 function saveLevelsAndDiscounts() {
-    const dataToSave = {
-        levels: levels,
-        discounts: discountByType,
-        // include adjustment settings so they persist when exporting/importing
-        profitPercent: profitPercent,
-        profitFixed: profitFixed,
-        popPercent: popPercent,
-        popFixed: popFixed,
-        showInactive: showInactive
-    };
-    // Note: This part of the code is intended to be used in an environment where
-    // we can write to a file. In a standard browser environment, this would
-    // typically trigger a download.
-    // For the purpose of this IDE simulation, we'll assume a file write is possible
-    // or the download functionality is handled elsewhere.
-    console.log('Saving data:', dataToSave);
-    // Persist the current state into localStorage so that the interface can
-    // restore user preferences (levels, discounts, adjustments and
-    // visibility of inactive objects) across page reloads.  Note that the
-    // application still relies on object_levels.json for a more permanent
-    // export/import mechanism.
-    try {
-      localStorage.setItem('object_levels', JSON.stringify(dataToSave));
-      localStorage.setItem('discounts', JSON.stringify(discountByType));
-    } catch (err) {
-      console.warn('Unable to save to localStorage:', err);
-    }
-    // In a real application, you would use a backend API or similar to save this.
-    // For this example, we'll just keep the download functionality.
-}
+  const levelsToSave = {};
+  // Iterate over ALL known objects so we can map numeric level -> "fullyUpgraded" at max
+  objects.forEach(o => {
+    const maxIdx = maxIndexFor(o);
+    const numeric = levels[o.id] ?? 0;
+    levelsToSave[o.id] = serializeLevel(numeric, maxIdx);
+  });
 
-// Download current levels and discounts as JSON when user clicks the save button
-document.getElementById('download-btn').onclick = () => {
-  /*
-   * Construct the object that will be written to object_levels.json.  In
-   * addition to the levels and discount mappings, persist any adjustment
-   * settings (profit/population multipliers and fixed adjustments) and the
-   * showInactive flag so that user preferences are retained when the file is
-   * re‑loaded.  Without including showInactive, toggling the checkbox
-   * wouldn't be preserved across sessions.
-   */
-  const dataToDownload = {
-    levels: levels,
+  const dataToSave = {
+    levels: levelsToSave,
     discounts: discountByType,
     profitPercent: profitPercent,
     profitFixed: profitFixed,
@@ -390,6 +371,35 @@ document.getElementById('download-btn').onclick = () => {
     popFixed: popFixed,
     showInactive: showInactive
   };
+
+  // Persist to localStorage for session continuity
+  try {
+    localStorage.setItem('object_levels', JSON.stringify(dataToSave));
+    localStorage.setItem('discounts', JSON.stringify(discountByType));
+  } catch (err) {
+    console.warn('Unable to save to localStorage:', err);
+  }
+}
+
+// Download current levels/settings as JSON
+document.getElementById('download-btn').onclick = () => {
+  const levelsToSave = {};
+  objects.forEach(o => {
+    const maxIdx = maxIndexFor(o);
+    const numeric = levels[o.id] ?? 0;
+    levelsToSave[o.id] = serializeLevel(numeric, maxIdx);
+  });
+
+  const dataToDownload = {
+    levels: levelsToSave,
+    discounts: discountByType,
+    profitPercent: profitPercent,
+    profitFixed: profitFixed,
+    popPercent: popPercent,
+    popFixed: popFixed,
+    showInactive: showInactive
+  };
+
   const blob = new Blob([JSON.stringify(dataToDownload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -401,80 +411,81 @@ document.getElementById('download-btn').onclick = () => {
   URL.revokeObjectURL(url);
 };
 
-// Load levels and discounts from a user-selected JSON file
+// Load levels/settings from a user-selected JSON file
 document.getElementById('load-btn').onclick = () => {
   document.getElementById('load-levels-input').click();
 };
 
 document.getElementById('load-levels-input').onchange = (event) => {
   const file = event.target.files[0];
-  if (!file) {
-    return;
-  }
+  if (!file) return;
+
   const reader = new FileReader();
   reader.onload = (e) => {
     try {
       const loadedData = JSON.parse(e.target.result);
-        // Basic validation to ensure it's a plausible file structure
-      if (typeof loadedData === 'object' && loadedData !== null && loadedData.levels && loadedData.discounts) {
-        /*
-         * Replace existing data structures with those from the loaded file.
-         * Validate and sanitize values as needed.  Also apply persisted
-         * adjustment parameters and the showInactive flag.  If the latter
-         * is omitted from the file (for backward‑compatibility with
-         * pre‑existing files), keep the current checkbox state.  After
-         * loading, re‑clamp level values to ensure they are within valid
-         * bounds and refresh the UI.
-         */
-        levels = loadedData.levels;
-        discountByType = loadedData.discounts;
-        // Load adjustment values if provided
-        profitPercent = loadedData.profitPercent != null ? loadedData.profitPercent : profitPercent;
-        profitFixed = loadedData.profitFixed != null ? loadedData.profitFixed : profitFixed;
-        popPercent = loadedData.popPercent != null ? loadedData.popPercent : popPercent;
-        popFixed = loadedData.popFixed != null ? loadedData.popFixed : popFixed;
-        // Apply showInactive flag if present; otherwise retain current setting
-        if (loadedData.showInactive != null) {
-          showInactive = loadedData.showInactive;
-        }
-        // Re-clamp level values after loading
-        objects.forEach(o => {
-          if (levels[o.id] == null) levels[o.id] = 0;
-          const maxIndex = o.levels.length;
-          if (levels[o.id] > maxIndex) levels[o.id] = maxIndex;
-          if (levels[o.id] < 0) levels[o.id] = 0;
-        });
-         // Ensure discount keys exist for each type after loading
-         objects.forEach(o => { if (discountByType[o.type] == null) discountByType[o.type] = 0; });
-        // Update localStorage (optional, but good for persistence between sessions)
-        localStorage.setItem('object_levels', JSON.stringify({
-          levels: levels,
-          discounts: discountByType,
-          profitPercent: profitPercent,
-          profitFixed: profitFixed,
-          popPercent: popPercent,
-          popFixed: popFixed,
-          showInactive: showInactive
-        }));
-        localStorage.setItem('discounts', JSON.stringify(discountByType)); // Keep localStorage 'discounts' for backward compatibility or other uses
-        // Update the checkbox UI to reflect the loaded state
-        document.getElementById('show-inactive-checkbox').checked = showInactive;
-        renderDiscountFields();
-        renderAdjustmentFields();
-        renderCards();
-        renderStats();
-        alert('Levels, discounts, adjustments and settings loaded successfully!');
-      } else {
+      if (typeof loadedData !== 'object' || loadedData === null || !loadedData.levels || !loadedData.discounts) {
         alert('Invalid file format. Please select a file with levels and discounts.');
+        return;
       }
+
+      // Read raw levels (numbers or "fullyUpgraded") and normalize to numeric internally
+      const rawLevels = loadedData.levels || {};
+      discountByType = loadedData.discounts || {};
+      profitPercent = loadedData.profitPercent != null ? loadedData.profitPercent : profitPercent;
+      profitFixed = loadedData.profitFixed != null ? loadedData.profitFixed : profitFixed;
+      popPercent = loadedData.popPercent != null ? loadedData.popPercent : popPercent;
+      popFixed = loadedData.popFixed != null ? loadedData.popFixed : popFixed;
+      if (loadedData.showInactive != null) showInactive = loadedData.showInactive;
+
+      // Normalize numeric levels and fullyUpgraded flags
+      levels = {};
+      fullyUpgraded = {};
+      objects.forEach(o => {
+        const maxIdx = maxIndexFor(o);
+        const raw = rawLevels[o.id];
+        const num = resolveNumericLevel(raw == null ? 0 : raw, maxIdx);
+        levels[o.id] = num;
+        fullyUpgraded[o.id] = num >= maxIdx;
+      });
+
+      // Ensure discounts exist for all known types
+      const types = new Set(objects.map(o => o.type));
+      types.forEach(t => { if (discountByType[t] == null) discountByType[t] = 0; });
+
+      // Update UI
+      document.getElementById('show-inactive-checkbox').checked = showInactive;
+      renderDiscountFields();
+      renderAdjustmentFields();
+      renderCards();
+      renderStats();
+
+      // Sync to localStorage in the new format (levels with "fullyUpgraded" on max)
+      const levelsToSave = {};
+      objects.forEach(o => {
+        const maxIdx = maxIndexFor(o);
+        const numeric = levels[o.id] ?? 0;
+        levelsToSave[o.id] = serializeLevel(numeric, maxIdx);
+      });
+      localStorage.setItem('object_levels', JSON.stringify({
+        levels: levelsToSave,
+        discounts: discountByType,
+        profitPercent,
+        profitFixed,
+        popPercent,
+        popFixed,
+        showInactive
+      }));
+      localStorage.setItem('discounts', JSON.stringify(discountByType));
+
+      alert('Levels, discounts, and settings loaded successfully!');
     } catch (err) {
       alert('Error reading or parsing file.');
       console.error(err);
     }
   };
   reader.readAsText(file);
-  // Reset file input so the same file can be loaded again
-  event.target.value = '';
+  event.target.value = ''; // allow re-uploading the same file
 };
 
 // Populate discount settings fields
@@ -497,7 +508,6 @@ function renderDiscountFields() {
       if (isNaN(val) || val < 0) val = 0;
       if (val > 100) val = 100;
       discountByType[type] = val;
-      // persist discounts and levels to object_levels.json
       saveLevelsAndDiscounts();
       renderCards();
       renderStats();
@@ -514,7 +524,6 @@ function renderAdjustmentFields() {
   if (!container) return;
   container.innerHTML = '';
 
-  // Helper to create a labeled numeric input
   function addField(labelText, valueGetter, valueSetter, options = {}) {
     const wrapper = document.createElement('div');
     const label = document.createElement('label');
@@ -529,11 +538,9 @@ function renderAdjustmentFields() {
     input.oninput = () => {
       let val = parseFloat(input.value);
       if (isNaN(val)) val = 0;
-      // If a max is defined and value exceeds it, clamp
       if (options.max != null && val > options.max) val = options.max;
       if (options.min != null && val < options.min) val = options.min;
       valueSetter(val);
-      // persist changes
       saveLevelsAndDiscounts();
       renderStats();
     };
@@ -542,13 +549,9 @@ function renderAdjustmentFields() {
     container.appendChild(wrapper);
   }
 
-  // Profit percent (percentage multiplier, default 100%)
   addField('Profit percent (%)', () => profitPercent, (val) => { profitPercent = val; }, { min: 0 });
-  // Profit fixed amount
   addField('Profit fixed', () => profitFixed, (val) => { profitFixed = val; });
-  // Population percent (percentage multiplier, default 100%)
   addField('Population percent (%)', () => popPercent, (val) => { popPercent = val; }, { min: 0 });
-  // Population fixed amount
   addField('Population fixed', () => popFixed, (val) => { popFixed = val; });
 }
 
@@ -564,51 +567,43 @@ document.getElementById('settings-btn').onclick = () => {
 
 // Compute and render total cross profit and population across all objects at their current levels
 function renderStats() {
-  // Determine which objects are currently visible based on the selected type
-  // and the showInactive flag.  Only these objects contribute to the
-  // displayed card count and aggregated stats.
   const filteredByType = currentType === 'ALL'
     ? objects
     : objects.filter(o => o.type === currentType);
   const relevantObjects = showInactive
     ? filteredByType
     : filteredByType.filter(o => o.is_active);
+
   let totalProfit = 0;
   let totalPop = 0;
-  /*
-   * Cross metrics should accumulate values across levels 1 through the
-   * current level. Level index 0 represents the base state and
-   * therefore contributes no cross profit or population. When all
-   * cards are at level 0, the totals should be zero.  Only the currently
-   * visible cards are included in these totals so that the displayed
-   * counts and aggregates reflect what the user sees on the page.
-   */
+
   relevantObjects.forEach(obj => {
     const lvl = levels[obj.id] ?? 0;
     const curr = lvl > 0 ? (obj.levels[lvl - 1] || {}) : {};
     totalProfit += (curr.income_per_hour ?? 0);
     totalPop += (curr.population ?? 0);
   });
+
   const bar = document.getElementById('stats-bar');
   const totalCards = relevantObjects.length;
-  // Compute adjusted totals based on percentage multipliers and fixed amounts
+
   const profitPercentValue = (totalProfit * (profitPercent / 100));
   const totalProfitAdjusted = profitFixed + profitPercentValue;
   const popPercentValue = (totalPop * (popPercent / 100));
   const totalPopAdjusted = popFixed + popPercentValue;
-  // Compose display string; show original totals with their adjusted counterparts
+
   bar.textContent =
     `Total Cards: ${totalCards} | ` +
     `Total Profit: ${totalProfitAdjusted.toLocaleString()} | ` +
     `Total Population: ${totalPopAdjusted.toLocaleString()}`;
 }
 
-// Add event listener for the show/hide inactive checkbox
+// Show/hide inactive checkbox
 document.getElementById('show-inactive-checkbox').onchange = (e) => {
   showInactive = e.target.checked;
   saveLevelsAndDiscounts();
   renderCards();
 };
 
-// Initial render of cards with the default showInactive setting
+// Initial render to ensure UI binds are in place if init fails early
 renderCards();

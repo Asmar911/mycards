@@ -4,8 +4,11 @@ from datetime import datetime
 import pytz
 
 
+
 def organize_game_objects(input_path: str, output_path: str) -> None:
-    """Read game objects from a decoded JSON file and save summary with level data."""
+    """Read game objects from a decoded JSON file and save summary with level data,
+    sorted by object id.
+    """
     with open(input_path, "r", encoding="utf-8") as f:
         data: List[List[Dict[str, Any]]] = json.load(f)
 
@@ -44,9 +47,13 @@ def organize_game_objects(input_path: str, output_path: str) -> None:
             }
         )
 
+    # 🔹 Sort all objects by ID before saving
+    result.sort(key=lambda x: x["id"])
+
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"Game objects organized and saved to {output_path}")
+
+    print(f"Game objects organized and saved to {output_path} (sorted by ID)")
 
 
 # def organize_quizzes(input_path: str, output_path: str) -> None:
